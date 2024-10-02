@@ -1,0 +1,9 @@
+title: 'Social media'
+data:
+  social_media:
+    -
+      id: m1scodrj
+      handle: osmosis.world/
+      prefix: 'https://www.instagram.com/'
+      type: instagram
+      enabled: true
