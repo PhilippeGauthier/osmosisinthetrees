@@ -2,8 +2,8 @@
 id: home
 blueprint: page
 title: Home
-updated_by: ceaa75bd-bc37-4a8b-b0f2-b7af70e58b0e
-updated_at: 1693487994
+updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
+updated_at: 1727984777
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -20,32 +20,27 @@ page_builder:
         content:
           -
             type: text
-            text: 'Start out on top'
+            text: 'Osmosis in the trees'
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Peak is your personal bespoke development sherpa. Start every project with this kit full of development goodies. '
-      -
-        type: paragraph
-        content:
+            text: 'Previously hosted exclusively at the hallowed Ming Lounge, a century-old Chinese restaurant in Portland, Osmosis has found a second home amidst the tranquil beauty of the trees. With a penchant for bringing hi-fi soundscapes to DIY spaces, the Osmosis team has been hard at work curating a weekend of audio/visual immersion.'
+          -
+            type: hardBreak
+          -
+            type: hardBreak
           -
             type: text
-            text: "But beware, this kit ain't here to be pretty. There are some examples of what Peak can do, but the rest is up to you. "
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Get climbing!'
+            text: 'Join us Thursday, October 24th through Sunday, October 27th for three nights of music and magic.'
     type: article
     enabled: true
   -
     id: eFlcYHyl
     title: Features
     type: cards
-    enabled: true
+    enabled: false
     cards:
       -
         id: lly5m22j
@@ -104,4 +99,57 @@ page_builder:
             target_blank: true
             url: 'https://peak.1902.studio'
             button_type: inline
+  -
+    id: m1tk8r1u
+    intro:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: "Stay tuned over\_"
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: 'http://www.instagram.com/osmosis.world'
+                  rel: null
+                  target: _blank
+                  title: null
+            text: '@osmosis.world'
+          -
+            type: text
+            text: ' as we continue to announce artists.'
+    artists:
+      - 8b0b266c-21f9-4c6f-bd2e-1eb6a2b3053c
+    type: artists_grid
+    enabled: true
+    collection:
+      - artists
+  -
+    id: m1tgfzm1
+    faq_entries:
+      - d13dabdd-2145-4b66-ab0f-d1225363fb8d
+      - 03fb4a49-c831-4ba4-9d0f-f238529e4149
+      - 29a78c73-28ba-4611-a1bd-dab7bdaa6292
+      - d88dceae-ab16-4d4d-abd7-42515b1e8dde
+      - 3be14c65-3745-4f15-adc1-a2e6b35e4705
+      - deebe7eb-70b3-4297-a787-4ae4ebf18ee6
+      - 5dd99afd-423a-4299-8104-8a9b54c3aae7
+      - 63cce7c2-3294-48db-a8c0-d328f9dcf276
+      - 00f07357-708a-4eb4-b4d4-6d7caf779e20
+      - 0bd4e03b-8538-46b7-9a4e-a006380b619d
+      - ba850a95-6b48-4a44-b119-cb88cbd7e322
+      - 64050635-4830-4867-ae93-b268048034e9
+      - 3d8e214c-1adf-422d-bc8a-ae449f2e76f6
+      - 8635116a-0aa2-4df3-8839-99fbaad60772
+      - a6ddaa77-38f6-466c-8b93-a186bbcd82f2
+      - 799fd716-faeb-4bfb-ad97-ef17311f9280
+      - 35a7dfd2-943a-47d8-acbc-1ec505ee3e6c
+      - 97d5889f-63d3-48ee-9ebf-4a7cc724df59
+    type: faq_from_entries
+    enabled: true
+    title: Information
 ---

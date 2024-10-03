@@ -1,0 +1,7 @@
+title: 'FAQ from entries'
+fields:
+  -
+    handle: faq_entries
+    field:
+      type: entries
+      display: 'FAQ entries'

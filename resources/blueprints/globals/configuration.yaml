@@ -6,15 +6,25 @@ tabs:
         display: 'Festival Details'
         fields:
           -
-            handle: osmosis_date
-            field:
-              type: text
-              display: 'Osmosis Date'
-          -
             handle: osmosis_simple_location
             field:
               type: text
               display: 'Osmosis Simple Location'
+          -
+            handle: start_date
+            field:
+              type: date
+              display: 'Start Date'
+          -
+            handle: end_date
+            field:
+              type: date
+              display: 'End Date'
+          -
+            handle: tickets_link
+            field:
+              type: link
+              display: 'Tickets Link'
       -
         display: 'System pages'
         instructions: 'Configure system pages.'

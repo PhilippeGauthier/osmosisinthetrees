@@ -1,0 +1,26 @@
+{{#
+    @name Cards
+    @desc The Cards page builder block.
+    @set page.page_builder.cards
+#}}
+
+    <!-- /page_builder/_cards.antlers.html -->
+    {{ partial:page_builder/block }}
+    <div
+         class="max-w-5xl mx-auto grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16 md:grid-cols-4" id="artists">
+        {{ block:title ?= { partial:typography/h2 :content="block:title" class="md:col-start-3 md:col-span-8 text-center" } }}
+
+
+        {{ collection:artists sort="random" }}
+            {{ partial:components/artist_grid }}
+        {{ /collection:artists }}
+        {{ collection:artists sort="random" }}
+            {{ partial:components/artist_grid }}
+        {{ /collection:artists }}
+        {{ collection:artists sort="random" }}
+            {{ partial:components/artist_grid }}
+        {{ /collection:artists }}
+
+    </div>
+    {{ /partial:page_builder/block }}
+    <!-- End: /page_builder/_cards.antlers.html -->

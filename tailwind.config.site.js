@@ -14,21 +14,30 @@ module.exports = {
     theme: {
         // Here we define the default colors available. If you want to include
         // all default Tailwind colors you should extend the colors instead.
-        colors: {
-            black: "#000",
-            white: "#fff",
-            "dark-blue": "#191930",
-            // Neutrals: neutral colors, with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
-            neutral: {
-                DEFAULT: "#FFFAD8",
-                ...colors.slate,
-            },
-            // Primary: primary brand color with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
-            primary: {
-                DEFAULT: "#DDFF00",
-            },
-        },
+
         extend: {
+            colors: {
+                black: "#000",
+                white: "#fff",
+                "dark-blue": "#191930",
+
+                // Neutrals: neutral colors, with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
+                neutral: {
+                    DEFAULT: "#FFFAD8",
+                    ...colors.slate,
+                },
+                // Primary: primary brand color with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
+                primary: {
+                    DEFAULT: "#DDFF00",
+                },
+            },
+            borderRadius: {
+                "4xl": "2rem",
+                "5xl": "2.5rem",
+            },
+            maxWidth: {
+                "2xl": "40rem",
+            },
             // Set default transition durations and easing when using the transition utilities.
             transitionDuration: {
                 DEFAULT: "300ms",

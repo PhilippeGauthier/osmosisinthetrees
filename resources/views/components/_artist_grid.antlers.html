@@ -1,0 +1,61 @@
+<div x-data="{ open: false }">
+    <div class="group relative aspect-square transform overflow-hidden rounded-2xl">
+        <div 
+             class="absolute bottom-6 left-0 right-4 top-0 rounded-2xl border transition duration-300 group-hover:scale-95 xl:right-6 border-blue-300">
+        </div>
+        <div class="absolute inset-0 bg-indigo-50"
+             style="clip-path:url(#:R57qfja:-0)">
+            <img alt=""
+             @click="open = !open"
+                 src="{{ glide:portrait format="webp" fit="crop_focal" square="400" }}"
+                 width="600"
+                 class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110">
+        </div>
+    </div>
+    <div >
+        <h3 class="mt-8 font-display text-xl font-bold tracking-tight text-primary">{{ title }}</h3>
+        <div :class="{ 'line-clamp-3': !(open) }"
+             class="prose prose-p:text-xs">
+            {{ bio }}
+        </div>
+        <button type="button"
+                x-description="Expand/collapse question button"
+                class="flex w-full items-start justify-between text-left text-primary"
+                aria-controls="faq-{{ index }}"
+                @click="open = !open"
+                aria-expanded="true"
+                x-bind:aria-expanded="open.toString()">
+            <span class="text-sm font-semibold leading-7">Learn More</span>
+            <span class="ml-6 flex h-7 items-center">
+                <svg x-description="Icon when question is collapsed."
+                     x-state:on="Item expanded"
+                     x-state:off="Item collapsed"
+                     class="h-6 w-6 hidden"
+                     :class="{ 'hidden': open }"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke-width="1.5"
+                     stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 6v12m6-6H6"></path>
+                </svg>
+                <svg x-description="Icon when question is expanded."
+                     x-state:on="Item expanded"
+                     x-state:off="Item collapsed"
+                     class="h-6 w-6"
+                     :class="{ 'hidden': !(open) }"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke-width="1.5"
+                     stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M18 12H6"></path>
+                </svg>
+            </span>
+        </button>
+    </div>
+</div>

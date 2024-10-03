@@ -30,6 +30,39 @@ fields:
               fields:
                 -
                   import: cards
+            faq_from_entries:
+              display: 'FAQ from entries'
+              icon: alert-help-question
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  import: faq_from_entries
+            artists_grid:
+              display: 'Artists Grid'
+              fields:
+                -
+                  handle: intro
+                  field:
+                    remove_empty_nodes: false
+                    type: bard
+                    display: Intro
+                -
+                  handle: artists
+                  field:
+                    create: false
+                    collections:
+                      - artists
+                    type: entries
+                    display: Artists
+                -
+                  handle: collection
+                  field:
+                    type: collections
+                    display: Collection
         text:
           display: Text
           instructions: 'Text based blocks.'
