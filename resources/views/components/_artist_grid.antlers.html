@@ -9,11 +9,11 @@
              @click="open = !open"
                  src="{{ glide:portrait format="webp" fit="crop_focal" square="400" }}"
                  width="600"
-                 class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110">
+                 class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110 hover:cursor-pointer">
         </div>
     </div>
     <div >
-        <h3 class="mt-8 font-display text-xl font-bold tracking-tight text-primary">{{ title }}</h3>
+        <h3 @click="open = !open" class="mt-8 font-display text-xl font-bold tracking-tight text-primary hover:cursor-pointer">{{ title }}</h3>
         <div :class="{ 'line-clamp-3': !(open) }"
              class="prose prose-p:text-xs">
             {{ bio }}
