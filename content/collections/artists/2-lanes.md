@@ -24,6 +24,19 @@ bio:
       -
         type: hardBreak
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1727976679
+updated_at: 1728074683
 portrait: artists/2lanes/_ZAC3681.jpg
+social_media:
+  -
+    id: m1v6yv3j
+    handle: 2lanes
+    prefix: 'https://www.soundcloud.com/'
+    type: soundcloud
+    enabled: true
+  -
+    id: m1v7046g
+    handle: 2lanes.zoomzoom
+    prefix: 'https://www.instagram.com/'
+    type: instagram
+    enabled: true
 ---

@@ -20,6 +20,104 @@ tabs:
               display: Portrait
               folder: artists
           -
+            handle: social_media
+            field:
+              type: replicator
+              localizable: true
+              display: 'Social media'
+              button_label: 'Add account'
+              sets:
+                main:
+                  display: Main
+                  sets:
+                    email:
+                      display: Email
+                      icon: social-mail-send-email-message
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            display: Email
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'mailto:'
+                    facebook:
+                      display: Facebook
+                      icon: social-facebook
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            prepend: 'https://www.facebook.com/'
+                            display: Handle
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'https://www.facebook.com/'
+
+                    instagram:
+                      display: Instagram
+                      icon: social-instagram
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            prepend: 'https://www.instagram.com/'
+                            display: Handle
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'https://www.instagram.com/'
+                    soundcloud:
+                      display: soundcloud
+                      icon: social-soundcloud
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            prepend: 'https://www.soundcloud.com/'
+                            display: Handle
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'https://www.soundcloud.com/'
+
+                    youtube:
+                      display: YouTube
+                      icon: social-youtube
+                      fields:
+                        -
+                          handle: handle
+                          field:
+                            type: text
+                            localizable: true
+                            prepend: 'https://www.youtube.com/'
+                            display: Handle
+                            validate: required
+                        -
+                          handle: prefix
+                          field:
+                            type: hidden
+                            default: 'https://www.youtube.com/'
+
+          -
             handle: bio
             field:
               remove_empty_nodes: false

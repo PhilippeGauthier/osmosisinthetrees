@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1727984777
+updated_at: 1728064986
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -13,14 +13,6 @@ page_builder:
   -
     id: T5ZZwBfn
     article:
-      -
-        type: heading
-        attrs:
-          level: 1
-        content:
-          -
-            type: text
-            text: 'Osmosis in the trees'
       -
         type: paragraph
         content:
@@ -36,6 +28,7 @@ page_builder:
             text: 'Join us Thursday, October 24th through Sunday, October 27th for three nights of music and magic.'
     type: article
     enabled: true
+    intro_animation: 'Osmosis in the trees'
   -
     id: eFlcYHyl
     title: Features
@@ -128,6 +121,7 @@ page_builder:
     enabled: true
     collection:
       - artists
+    title: Artists
   -
     id: m1tgfzm1
     faq_entries:

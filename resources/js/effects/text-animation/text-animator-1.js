@@ -1,3 +1,8 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 // Import the TextSplitter class for handling text splitting.
 import { TextSplitter } from "./textSplitter.js";
 

@@ -4,6 +4,11 @@
 #}}
 
 <main class="py-12 md:py-16 lg:py-24 stack-12 md:stack-16 lg:stack-24" id="content">
+    {{ partial:components/svg_filter }}
+
+        {{# <h2 data-filter="goo-1" data-script="filter1" style="opacity: 0" class="opacity-0 text-7xl">Wave</h2> #}}
+        <img data-filter="goo-1" data-script="filter1" style="opacity: 0" class="w-2/3 mx-auto" src="visuals/oitt_full.svg" alt="">
+        {{# <h1 class="text-center text-5xl font-bold text-primary" data-filter="goo-1" data-script="filter1" style="opacity: 0" >OSMOSIS IN THE TREES</h1> #}}
     {{ page_builder scope="block" }}
         {{ partial src="page_builder/{type}" }}
     {{ /page_builder }}

@@ -20,7 +20,7 @@ module.exports = {
                 black: "#000",
                 white: "#fff",
                 "dark-blue": "#191930",
-
+                "osmosis-orange": "#FF5500",
                 // Neutrals: neutral colors, with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
                 neutral: {
                     DEFAULT: "#FFFAD8",

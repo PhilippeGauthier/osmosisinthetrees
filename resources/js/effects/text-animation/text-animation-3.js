@@ -1,4 +1,4 @@
-import { TextAnimator } from "./text-animator.js";
+import { TextAnimator } from "./text-animator-3.js";
 
 const init = () => {
     document.querySelectorAll(".list__item").forEach((item) => {
