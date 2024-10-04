@@ -88,15 +88,15 @@ export class TextAnimator {
                     opacity: 0,
                 },
                 {
-                    duration: 0.03,
+                    duration: 0.02,
                     onStart: () => {
                         // Set --opa to 1 at the start of the animation
                         gsap.set(char, { "--opa": 1 });
                     },
                     onComplete: () => {
-                        gsap.set(char, { innerHTML: initialHTML, delay: 0.03 });
+                        gsap.set(char, { innerHTML: initialHTML, delay: 0.02 });
                     },
-                    repeat: 3,
+                    repeat: 1,
                     onRepeat: () => {
                         repeatCount++;
                         if (repeatCount === 1) {
@@ -105,8 +105,8 @@ export class TextAnimator {
                         }
                     },
                     repeatRefresh: true,
-                    repeatDelay: 0.04,
-                    delay: (position + 1) * 0.07,
+                    repeatDelay: 0.02,
+                    delay: (position + 1) * 0.03,
                     innerHTML: () =>
                         lettersAndSymbols[
                             Math.floor(Math.random() * lettersAndSymbols.length)
