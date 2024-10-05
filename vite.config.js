@@ -26,7 +26,7 @@ export default defineConfig(({ command, mode }) => {
                     "resources/js/site.js",
                     "resources/js/effects/text-animation/text-animation-1.js",
                     "resources/js/effects/svg-filter/main.js",
-                    "resources/js/effects/svg-filter/filter1.js",
+                    "resources/js/effects/svg-filter/filters/filter1.js",
                 ],
             }),
         ],

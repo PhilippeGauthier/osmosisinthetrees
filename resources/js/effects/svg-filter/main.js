@@ -38,7 +38,7 @@ const init = async () => {
             if (!importedScripts.has(scriptName)) {
                 try {
                     // Dynamically import the script and mark it as imported
-                    const module = await import(`./${scriptName}.js`);
+                    const module = await import(`./filters/${scriptName}.js`);
                     importedScripts.add(scriptName);
                     // Initialize the specific animation for this element
                     module.default(element);
@@ -50,7 +50,7 @@ const init = async () => {
                 }
             } else {
                 // If the script is already imported, just initialize the animation
-                const module = await import(`./${scriptName}.js`);
+                const module = await import(`./filters/${scriptName}.js`);
                 module.default(element);
             }
         }

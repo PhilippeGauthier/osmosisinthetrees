@@ -25,9 +25,9 @@
             {{ stack:seo_body }}
             {{ partial:statamic-peak-tools::snippets/noscript }}
             {{ partial:statamic-peak-tools::navigation/skip_to_content }}
-            {{ partial:statamic-peak-tools::components/toolbar }}
+            {{ partial:components/side_nav }}
+            {{ partial:components/svg_filter }}
 
-            {{ partial:layout/header }}
             {{ template_content }}
             {{ partial:layout/footer }}
             {{# <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -38,9 +38,9 @@
                     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
                     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
             <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
-            {{ vite src="resources/js/effects/text-animation/text-animation-1.js" }}
+            {{# {{ vite src="resources/js/effects/text-animation/text-animation-1.js" }} #}}
             {{ vite src="resources/js/effects/svg-filter/main.js" }}
-            {{ vite src="resources/js/effects/svg-filter/filter1.js" }}
+            {{# {{ vite src="resources/js/effects/svg-filter/filters/filter1.js" }} #}}
         </body>
 
     </html>

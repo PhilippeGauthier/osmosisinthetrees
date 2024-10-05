@@ -2,12 +2,45 @@
     @name Default
     @desc The default template with an outer wrapper grid as defined in tailwind.config.js. It makes sure all blocks on a page get evenly spaced without having to worry about margins or paddings.
 #}}
+<div class="relative mih-screen bg-[url('../../public/visuals/oitt_hero_bg.jpg')]" >
+{{# <img src="/visuals/oitt_hero_bg.jpg" alt=""> #}}
+<div class="absolute bg-dark-blue/50 h-full w-full"></div>
+    <div class="relative px-6 lg:px-8">
+        
+        <div class="mx-auto relative">
+            {{ partial:layout/header }}
 
+            <div class="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
+                <img data-filter="goo-1" data-script="filter1" style="opacity: 0" class="w-2/3 mx-auto" src="visuals/oitt_full.svg" alt="">
+        </div>
+        </div>
+        {{ partial:page_builder/block }}
+        {{ block:title ?= { partial:typography/h2 :content="block:title" class="md:col-start-3 md:col-span-8 text-center mb-8" } }}
+        <div
+             class="max-w-5xl mx-auto grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16 md:grid-cols-4" id="artists">
+            
+    
+    
+            {{ collection:artists sort="random" }}
+                {{ partial:components/artist_grid }}
+            {{ /collection:artists }}
+            {{ collection:artists sort="random" }}
+                {{ partial:components/artist_grid }}
+            {{ /collection:artists }}
+            {{ collection:artists sort="random" }}
+                {{ partial:components/artist_grid }}
+            {{ /collection:artists }}
+    
+        </div>
+        {{ /partial:page_builder/block }}
+    </div>
+    
+</div>
 <main class="py-12 md:py-16 lg:py-24 stack-12 md:stack-16 lg:stack-24" id="content">
-    {{ partial:components/svg_filter }}
+    
 
         {{# <h2 data-filter="goo-1" data-script="filter1" style="opacity: 0" class="opacity-0 text-7xl">Wave</h2> #}}
-        <img data-filter="goo-1" data-script="filter1" style="opacity: 0" class="w-2/3 mx-auto" src="visuals/oitt_full.svg" alt="">
+        
         {{# <h1 class="text-center text-5xl font-bold text-primary" data-filter="goo-1" data-script="filter1" style="opacity: 0" >OSMOSIS IN THE TREES</h1> #}}
     {{ page_builder scope="block" }}
         {{ partial src="page_builder/{type}" }}

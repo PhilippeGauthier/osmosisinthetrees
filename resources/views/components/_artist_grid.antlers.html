@@ -2,9 +2,9 @@
 
 <div x-data="{ open: false }" class="">
     <!-- Trigger -->
-    <div class="group relative aspect-square transform overflow-hidden rounded-2xl">
+    <div class="group relative aspect-square transform overflow-hidden">
         <div 
-             class="absolute bottom-6 left-0 right-4 top-0 rounded-2xl border transition duration-300 group-hover:scale-95 xl:right-6 border-blue-300">
+             class="absolute bottom-6 left-0 right-4 top-0 border transition xl:right-6 border-blue-300">
         </div>
         <div class="absolute inset-0 bg-indigo-50"
              style="clip-path:url(#:R57qfja:-0)">
@@ -13,7 +13,7 @@
              
                  src="{{ glide:portrait format="webp" fit="crop_focal" square="400" }}"
                  width="600"
-                 class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110 hover:cursor-pointer">
+                 class="absolute inset-0 h-full w-full object-cover transition  hover:cursor-pointer">
         </div>
     </div>
     <div >
@@ -88,7 +88,7 @@
                         </div>
                     {{ /if }}
                     </div>
-                    <button type="button" x-on:click="open = false" class="rounded-md px-5 py-2.5">
+                    <button type="button" x-on:click="open = false" class="rounded-md border px-5 py-2.5">
                         Close
                     </button>
                 </div>
