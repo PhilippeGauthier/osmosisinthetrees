@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728064986
+updated_at: 1728089839
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -118,7 +118,7 @@ page_builder:
     artists:
       - 8b0b266c-21f9-4c6f-bd2e-1eb6a2b3053c
     type: artists_grid
-    enabled: true
+    enabled: false
     collection:
       - artists
     title: Artists
