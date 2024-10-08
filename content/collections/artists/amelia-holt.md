@@ -1,7 +1,7 @@
 ---
 id: dc34e6c5-6c48-4c00-8a70-c32791edc15f
 blueprint: artist
-title: 'Amelia Holt'
+title: 'AMELIA HOLT'
 portrait: 'artists/Amelia Holt/oitt24-artist-portraits-amelia-holt.JPG'
 bio:
   -
@@ -35,5 +35,5 @@ bio:
         type: text
         text: 'Outside the US, she’s brought her sound to Mexico City, Berlin, Munich, Helsinki, Copenhagen, Madrid and many more. In addition to her radio endeavors, Amelia curates the music newsletter In Your Dirty Ears and runs the party series Honey Trap.'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728331898
+updated_at: 1728426734
 ---

@@ -1,8 +1,7 @@
 ---
 id: 7bb0dc18-0f7e-4631-be14-6b5a23e0f48d
 blueprint: artist
-title: Morph
-portrait: artists/Morph/oitt24-artist-portraits-morph.png
+title: MORPH
 bio:
   -
     type: paragraph
@@ -17,5 +16,6 @@ bio:
         type: text
         text: 'To morph is to change and change is the only constant.'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728229095
+updated_at: 1728426563
+portrait: artists/Morph/oitt24-artist-portraits-morph.png
 ---

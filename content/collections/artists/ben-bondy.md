@@ -1,10 +1,9 @@
 ---
 id: 937bdfc8-6e10-4166-8067-757e089c3701
-published: false
 blueprint: artist
-title: 'Ben Bondy'
+title: 'BEN BONDY'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728334227
+updated_at: 1728426786
 bio:
   -
     type: paragraph
@@ -18,4 +17,5 @@ bio:
       -
         type: text
         text: 'who needs the intersection of art and technology, when you can be at the confluence of serenity and debauchery'
+portrait: artists/ben-bondy/oitt24-artist-portraits-ben-bondy.jpg
 ---

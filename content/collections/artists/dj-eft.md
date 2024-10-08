@@ -1,6 +1,5 @@
 ---
 id: 480d83e1-7183-4cc3-9b36-b2746f3241f4
-published: false
 blueprint: artist
 title: 'DJ EFT'
 bio:
@@ -23,5 +22,6 @@ bio:
         type: text
         text: 'Dedicated in every sense to the work of creating space for dance DJ Eft lays his heart out in everything he does, culminating into something unmistakably emotional and earnest.'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728410695
+updated_at: 1728426014
+portrait: artists/dj-eft/oitt24-artist-portraits-dj-eft.jpg
 ---

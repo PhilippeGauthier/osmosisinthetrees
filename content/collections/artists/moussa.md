@@ -17,5 +17,4 @@ bio:
         text: 'Be yourself / Proper sound / FluffyStuff'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
 updated_at: 1728332402
-portrait: 'artists/Moussa - مُوسَى/photo1---karim-moussa.jpg'
 ---

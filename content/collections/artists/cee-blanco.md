@@ -1,7 +1,7 @@
 ---
 id: 5f99980c-059b-4a80-bd8d-e60923198d23
 blueprint: artist
-title: 'Cee Blanco'
+title: 'CEE BLANCO'
 bio:
   -
     type: paragraph
@@ -28,6 +28,6 @@ bio:
         type: text
         text: www.mixcloud.com/ceeblanco
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728332121
+updated_at: 1728426303
 portrait: 'artists/Cee Blanco/oitt24-artist-portraits-cee-blanco.jpeg'
 ---

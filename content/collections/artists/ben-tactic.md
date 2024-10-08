@@ -1,9 +1,9 @@
 ---
 id: f55aef0c-40fd-4a02-b5ce-375cc66f03da
 blueprint: artist
-title: 'Ben Tactic'
+title: 'BEN TACTIC'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728250689
+updated_at: 1728426799
 bio:
   -
     type: paragraph

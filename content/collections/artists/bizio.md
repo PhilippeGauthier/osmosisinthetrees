@@ -1,10 +1,10 @@
 ---
 id: fc9d5256-e4eb-4741-ae25-cbf997f14022
 blueprint: artist
-title: Bizio
+title: BIZIO
 portrait: artists/Bizio/oitt-24-artist-portraits-bizio.jpg
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728332097
+updated_at: 1728426810
 bio:
   -
     type: paragraph

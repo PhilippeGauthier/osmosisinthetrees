@@ -1,7 +1,7 @@
 ---
 id: 8b0b266c-21f9-4c6f-bd2e-1eb6a2b3053c
 blueprint: artist
-title: '2 Lanes'
+title: '2 LANES'
 bio:
   -
     type: paragraph
@@ -22,7 +22,7 @@ bio:
         type: text
         text: '2lanes is imbued with the revolutionary tenacity present in every element of Detroit’s musical universe - through collaboration with like minded artists worldwide, building on his family’s musical history in the city, throwing Midwest-centric events to inspire cooperation & connectivity, he’s become part of a fresh generation of North American artists expanding on the mechanized innovations of midwest electronic music, always helping to share forms of respect, understanding, & knowledge to propel the present & future ever forward.'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728087535
+updated_at: 1728426549
 portrait: artists/2lanes/oitt24-artist-portraits-2lanes.jpg
 social_media:
   -

@@ -1,7 +1,7 @@
 ---
 id: 4faf2b3d-0bd4-4e92-a37f-6d75767617f7
 blueprint: artist
-title: 8maos
+title: 8MAOS
 portrait: artists/8maos/oitt24-artist-portraits-8maos.jpeg
 bio:
   -
@@ -17,5 +17,5 @@ bio:
         type: text
         text: "And now he's back to bring the music he loves to the community he loves. Whether he's curating or DJing, 8maos gravitates towards music that pulls you in - deep, dark, groovy, textured, sensual. His joy of selecting tracks for each unique set and setting is what keeps him going and takes his mixing to the next level."
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728331855
+updated_at: 1728426582
 ---

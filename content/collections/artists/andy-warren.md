@@ -1,7 +1,7 @@
 ---
 id: 581ccdc0-9436-4ea3-a50e-d891221fe740
 blueprint: artist
-title: 'Andy Warren'
+title: 'ANDY WARREN'
 portrait: 'artists/Andy Warren/oitt24-artist-portraits-andy-warren.JPG'
 bio:
   -
@@ -17,5 +17,5 @@ bio:
         type: text
         text: 'His energy, technical prowess, and penchant for strengthening community has lead him to play throughout the United States as well as Latin America & Europe. Andy Warren carries the spirit of the underground wherever he touches down, always bringing a multifarious selection of music for his late night (or early morning) musical journeys, exposing the mind and body to rhythms and rarities for heads and dancers alike. In the spring of 2024, a decade of efforts culminated with Andy & a team of like minded (crazy?) believers in the cause, opening a brick & mortar dance club - Process PDX. A rugged, yet cozy home for the Portland underground community.'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728331918
+updated_at: 1728426756
 ---
