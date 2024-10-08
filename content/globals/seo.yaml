@@ -4,6 +4,12 @@ data:
   noindex_local: true
   noindex_staging: true
   noindex_production: false
+  collection_defaults:
+    -
+      id: m20xey6o
+      collection: pages
+      fallback: custom_text
+      custom_text: 'Osmosis in the Trees - 2024'
   hreflang_auto: true
   json_ld_type: none
   breadcrumbs: false
@@ -16,6 +22,7 @@ data:
   trackers_production: true
   use_google_site_verification: false
   use_fathom: false
+  use_matomo: false
   use_plausible: false
   use_cloudflare_web_analytics: false
   tracker_type: none

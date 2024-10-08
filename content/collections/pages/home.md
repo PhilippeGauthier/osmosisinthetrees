@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728089839
+updated_at: 1728421409
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -146,4 +146,6 @@ page_builder:
     type: faq_from_entries
     enabled: true
     title: Information
+seo_title: 'Osmosis in the Trees - 2024'
+seo_description: 'A curated music festival in Talkima Oregon. October 24-26.'
 ---
