@@ -1,7 +1,7 @@
 ---
 id: 86af5dee-4034-4ca9-9845-7dabb0837681
 blueprint: artist
-title: 'Nema Hän'
+title: 'NEMA HÄN'
 portrait: 'artists/Nema Hän/oitt24-artist-portraits-nema-han.jpg'
 social_media:
   -
@@ -38,5 +38,5 @@ bio:
               title: null
         text: 'https://linktr.ee/nemahan'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728334158
+updated_at: 1728427247
 ---

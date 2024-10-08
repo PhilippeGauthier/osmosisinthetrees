@@ -22,6 +22,6 @@ bio:
         type: text
         text: 'Dedicated in every sense to the work of creating space for dance DJ Eft lays his heart out in everything he does, culminating into something unmistakably emotional and earnest.'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728426014
+updated_at: 1728426947
 portrait: artists/dj-eft/oitt24-artist-portraits-dj-eft.jpg
 ---

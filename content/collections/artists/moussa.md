@@ -1,7 +1,7 @@
 ---
 id: d66df6d4-ac5d-454c-989f-c4f614af9e3a
 blueprint: artist
-title: 'Moussa - مُوسَى'
+title: 'MOUSSA - مُوسَى'
 bio:
   -
     type: paragraph
@@ -16,5 +16,6 @@ bio:
         type: text
         text: 'Be yourself / Proper sound / FluffyStuff'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728332402
+updated_at: 1728427265
+portrait: artists/moussa/oitt24-artist-portraits-moussa.jpg
 ---

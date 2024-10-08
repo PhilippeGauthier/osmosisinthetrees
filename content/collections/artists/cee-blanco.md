@@ -28,6 +28,6 @@ bio:
         type: text
         text: www.mixcloud.com/ceeblanco
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728426303
+updated_at: 1728426842
 portrait: 'artists/Cee Blanco/oitt24-artist-portraits-cee-blanco.jpeg'
 ---
