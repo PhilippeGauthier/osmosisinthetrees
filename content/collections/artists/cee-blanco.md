@@ -2,7 +2,6 @@
 id: 5f99980c-059b-4a80-bd8d-e60923198d23
 blueprint: artist
 title: 'Cee Blanco'
-portrait: artists/oitt24-artist-portraits-cee-blanco.jpeg
 bio:
   -
     type: paragraph
@@ -22,6 +21,13 @@ bio:
       -
         type: text
         text: "Cee’s approach to the mix comes with an eclectic range, highlighting the power and voice of his selections. From Classic to Dirty Disco, to Deep and Soulful House, to Acid and Leftfield! Cee’s love for vinyl is what makes him even more special, the curation of\_ 45s, 10inches or 12inches in his sets are not to be missed!"
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: www.mixcloud.com/ceeblanco
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728089283
+updated_at: 1728332121
+portrait: 'artists/Cee Blanco/oitt24-artist-portraits-cee-blanco.jpeg'
 ---

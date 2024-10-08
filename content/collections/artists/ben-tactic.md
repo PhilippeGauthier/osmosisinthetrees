@@ -3,8 +3,7 @@ id: f55aef0c-40fd-4a02-b5ce-375cc66f03da
 blueprint: artist
 title: 'Ben Tactic'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728088719
-portrait: artists/oitt-24-artist-portraits-ben-tactic.jpg
+updated_at: 1728250689
 bio:
   -
     type: paragraph
@@ -24,4 +23,5 @@ bio:
       -
         type: text
         text: "Over the years he's hosted or performed with artists like Theo Parrish, Ben UFO, Avalon Emerson, DJ Deeon (RIP), Four Tet, Shanti Celeste, Kevin Saunderson & many more."
+portrait: artists/ben-tactic/oitt24-artist-portraits-ben-tactic.jpg
 ---
