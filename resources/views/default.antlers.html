@@ -4,23 +4,24 @@
 #}}
 <div class="relative mih-screen bg-[url('../../public/visuals/oitt_hero_bg.jpg')]" >
 {{# <img src="/visuals/oitt_hero_bg.jpg" alt=""> #}}
-<div class="absolute bg-dark-blue/50 h-full w-full"></div>
+<div class="absolute bg-dark-blue/70 h-full w-full"></div>
     <div class="relative px-6 lg:px-8">
         
         <div class="mx-auto relative">
             {{ partial:layout/header }}
 
-            <div class="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
+            <div class="pb-24 pt-16 sm:pb-24 sm:pt-24 md:pb-32 md:pt-24">
                 <img data-filter="goo-1" data-script="filter1" style="opacity: 0" class="w-2/3 mx-auto" src="visuals/oitt_full.svg" alt="">
         </div>
         </div>
         {{ partial:page_builder/block }}
-        {{ block:title ?= { partial:typography/h2 :content="block:title" class="md:col-start-3 md:col-span-8 text-center mb-8" } }}
+        {{ block:title ?= { partial:typography/h2 :content="block:title" class="md:col-start-3 md:col-span-8 text-left mb-8" } }}
+        <article class="prose mb-24 max-w-xl mx-auto">{{ header_paragraph }}</article>
         <div
-             class="max-w-md mx-auto flex flex-wrap justify-center mb-12" id="artists">
+             class="max-w-xl mx-auto gap-x-4 flex-wrap flex mb-12" id="artists">
             
     
-    
+            
             {{ collection:artists sort="order" }}
                 {{ partial:components/artist_grid }}
             {{ /collection:artists }}
@@ -35,7 +36,7 @@
 
         {{# <h2 data-filter="goo-1" data-script="filter1" style="opacity: 0" class="opacity-0 text-7xl">Wave</h2> #}}
         
-        {{# <h1 class="text-center text-5xl font-bold text-primary" data-filter="goo-1" data-script="filter1" style="opacity: 0" >OSMOSIS IN THE TREES</h1> #}}
+        {{# <h1 class="text-left text-5xl font-bold text-primary" data-filter="goo-1" data-script="filter1" style="opacity: 0" >OSMOSIS IN THE TREES</h1> #}}
     {{ page_builder scope="block" }}
         {{ partial src="page_builder/{type}" }}
     {{ /page_builder }}

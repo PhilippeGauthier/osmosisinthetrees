@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728423426
+updated_at: 1728428178
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -27,7 +27,7 @@ page_builder:
             type: text
             text: 'Join us Thursday, October 24th through Sunday, October 27th for three nights of music and magic.'
     type: article
-    enabled: true
+    enabled: false
     intro_animation: 'Osmosis in the trees'
   -
     id: eFlcYHyl
@@ -154,4 +154,18 @@ page_builder:
     enabled: true
 seo_title: 'Osmosis in the Trees - 2024'
 seo_description: 'A curated music festival in Talkima Oregon. October 24-26.'
+header_paragraph:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'Previously hosted exclusively at the hallowed Ming Lounge, a century-old Chinese restaurant in Portland, Osmosis has found a second home amidst the tranquil beauty of the trees. With a penchant for bringing hi-fi soundscapes to DIY spaces, the Osmosis team has been hard at work curating a weekend of audio/visual immersion.'
+      -
+        type: hardBreak
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Join us Thursday, October 24th through Sunday, October 27th for three nights of music and magic.'
 ---
