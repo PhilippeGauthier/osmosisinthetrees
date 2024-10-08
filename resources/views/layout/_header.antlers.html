@@ -24,24 +24,21 @@
                <p>{{ configuration:osmosis_simple_location }}</p>
            </div>
        </div>
-            <nav class="relative hidden lg:flex">
-                {{# {{ social_media:social_media }}
-                <a class="flex items-center px-4 py-3 text-base font- text-primary bg-blend-multiply hover:bg-black/[2.5%]" href="{{ prefix }}{{ handle }}" rel="noopener{{ type == 'mastodon' ?= ' me' }}" aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}" target="_blank">Linked<span class="font-bold">in</span></a>
-            {{ /social_media:social_media }} #}}
+            <nav class="relative hidden lg:flex space-x-6 text-sm">
+                {{ social_media:social_media }}
+                <a class="flex items-center  font- text-primary bg-blend-multiply hover:bg-black/[2.5%]" href="{{ prefix }}{{ handle }}" rel="noopener{{ type == 'mastodon' ?= ' me' }}" aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}" target="_blank">{{ svg :src="type" attr:class="w-4 h-4 overflow-visible fill-current transition hover:fill-osmosis-orange" attr:alt="" attr:aria-hidden="true" }}</a>
+            {{ /social_media:social_media }}
                 {{ nav:main max_depth="2" include_home="true" select="title|url" }}
 
                 {{ unless no_results }}
                 <div class="relative flex group/item "><a
-                       class="flex items-center px-4 py-3 text-base font-medium text-primary bg-blend-multiply hover:bg-black/[2.5%]"
+                       class="flex items-center  font-bold text-primary transition hover:text-osmosis-orange"
                        href="{{ url }}">{{ title }}</a></div>
                 {{ /unless }}
 
                 {{ /nav:main }}
-
-                <div class="relative flex group/item ">
-                    {{ social_media:social_media }}
-               <a class="flex items-center px-4 py-3 text-base font- text-primary bg-blend-multiply hover:bg-black/[2.5%]" href="{{ prefix }}{{ handle }}" rel="noopener{{ type == 'mastodon' ?= ' me' }}" aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}" target="_blank">{{ svg :src="type" attr:class="w-4 h-4 overflow-visible fill-current" attr:alt="" attr:aria-hidden="true" }}</a>
-           {{ /social_media:social_media }}</div>
+                    <a class="text-black bg-primary px-3 py-2 rounded-3xl font-bold transition hover:bg-osmosis-orange" href="{{ configuration:tickets_link }}">Buy Tickets</a>
+                
             </nav>
             <button class="flex size-12 items-center justify-center self-center rounded-lg data-[hover]:bg-black/5 lg:hidden"
                     aria-label="Open main menu"

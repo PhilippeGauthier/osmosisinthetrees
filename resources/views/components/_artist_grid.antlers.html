@@ -1,8 +1,8 @@
 
 
-<div x-data="{ open: false }" class="">
+<div x-data="{ open: false }" class="inline-block px-3 text-center">
     <!-- Trigger -->
-    <div class="group relative aspect-square transform overflow-hidden">
+    {{# <div class="group relative aspect-square transform overflow-hidden">
         <div 
              class="absolute bottom-6 left-0 right-4 top-0 border transition xl:right-6 border-blue-300">
         </div>
@@ -33,7 +33,9 @@
             {{ /if }}
             </div>
         </div>
-    </div>
+    </div> #}}
+    
+    <button class="font-bold" @click="open = true">{{ title }}</button>
 
     <!-- Modal -->
     <div
