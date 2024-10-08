@@ -15,15 +15,15 @@
             inline-flex items-baseline gap-0.5 font-bold motion-safe:transition
             {{ switch(
                 (button_type === 'inline') => 'underline decoration-2 motion-safe:transition',
-                (button_type === 'button') => 'max-w-full py-3 px-4 rounded leading-none no-underline select-none whitespace-nowrap',
+                (button_type === 'button') => 'max-w-full py-3 px-4 rounded-3xl leading-none no-underline select-none whitespace-nowrap',
             )}}
             {{ switch(
                 (button_type === 'inline' && !inverted) => 'text-neutral decoration-primary focus:outline-primary',
-                (button_type === 'button' && !inverted) => 'bg-primary text-white focus:outline-primary',
+                (button_type === 'button' && !inverted) => 'bg-primary text-black focus:outline-primary hover:bg-osmosis-orange transition',
             )}}
             {{ switch(
-                (button_type === 'inline' && inverted) => 'text-white decoration-white focus:outline-white',
-                (button_type === 'button' && inverted) => 'bg-white text-primary focus:outline-white',
+                (button_type === 'inline' && inverted) => 'text-black decoration-white focus:outline-white',
+                (button_type === 'button' && inverted) => 'bg-white text-primary focus:outline-white hover:bg-osmosis-orange transition',
             )}}
             {{ class }}
         "

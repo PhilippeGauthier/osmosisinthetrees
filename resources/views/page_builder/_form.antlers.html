@@ -6,8 +6,9 @@
 
 <!-- /page_builder/_form.antlers.html -->
 {{ partial:page_builder/block }}
-    <div class="span-content md:col-start-[col-3] md:col-span-8">
-        {{ block:title ?= { partial:typography/h1 as="h2" class="mb-8" :content="block:title" } }}
+
+        <div class="mx-auto max-w-xl">
+            {{ block:title ?= { partial:typography/h2 :content="block:title" class="text-center" class="md:col-start-3 md:col-span-8 text-center" } }}
         {{ block:text ?= { partial:typography/p :content="block:text" } }}
 
         {{# Render form and use Alpine based Statamic conditional logic. #}}
@@ -114,6 +115,7 @@
             {{# Call in the Peak Tools Alpine Based Precognition Form Handler. #}}
             {{ partial:statamic-peak-tools::snippets/form_handler }}
         {{ /if }}
-    </div>
+
+</div>
 {{ /partial:page_builder/block }}
 <!-- End: /page_builder/_form.antlers.html -->
