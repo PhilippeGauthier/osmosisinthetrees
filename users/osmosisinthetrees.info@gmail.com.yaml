@@ -6,3 +6,7 @@ preferences:
   assets:
     images:
       mode: grid
+      per_page: 100
+  collections:
+    artists:
+      per_page: 100
