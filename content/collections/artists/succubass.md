@@ -9,7 +9,7 @@ bio:
     content:
       -
         type: text
-        text: 'All West Coast ravers worth their salt are intimately familiar with the expansive stylings of Seattle’s Succubass. Her technical prowess and fierce style have earned her high praise from her appearances at revered institutions like Sustain-Release, REEF, Nowadays, Basement, and Honcho. A busy touring schedule and a string of residencies currently keep Succubass rightfully occupied as she spreads her devious gospel across the country, cracking skulls and shaking asses wherever the dance floor she graces.'
+        text: 'Jess Duran aka Succubass is for everyone: the wook intellegencia, techno pseudointellectuals, gay guys who cruise at Costco, ketamine witch doctors, green-room social climbers, bisexuals in ketosis, ambient tent boofers, twinks on Beatport, record store karens, hot girls on torrent sites, boyfriends with boiler room push notifications, designer drug sommeliers, hung drag queens, burners who fuck with IDM, bassbin babysitters, Detroit purists who have never been to Michigan, smokers pit community elders, glove light show bottoms, and the track-id impaired.'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728432527
+updated_at: 1728674931
 ---
