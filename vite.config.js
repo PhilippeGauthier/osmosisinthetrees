@@ -1,5 +1,6 @@
 import laravel from "laravel-vite-plugin";
 import { defineConfig, loadEnv } from "vite";
+import path from "path";
 
 export default defineConfig(({ command, mode }) => {
     const env = loadEnv(mode, process.cwd(), "");
@@ -32,6 +33,11 @@ export default defineConfig(({ command, mode }) => {
         ],
         server: {
             open: env.APP_URL,
+        },
+        resolve: {
+            alias: {
+                "@": path.resolve(__dirname, "resources"),
+            },
         },
     };
 });

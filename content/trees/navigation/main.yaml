@@ -1,9 +1,5 @@
 tree:
   -
-    id: d3a75039-f66c-4ee0-942d-13e9b3726409
-    title: Artists
-    url: '#artists'
-  -
     id: d4451a43-a8db-4557-9dd8-b7da035017cc
     title: Information
     children:

@@ -53,18 +53,27 @@ module.exports = {
                 // Use a custom mono font for this site by changing 'Anonymous' to the
                 // font name you want and uncommenting the following line.
                 // 'Anonymous',
+                "Roboto Mono",
                 ...defaultTheme.fontFamily.mono,
             ],
             sans: [
                 // Use a custom sans serif font for this site by changing 'Gaultier' to the
                 // font name you want and uncommenting the following line.
                 // 'Gaultier',
+                "Lato",
                 ...defaultTheme.fontFamily.sans,
             ],
             serif: [
                 // Use a custom serif font for this site by changing 'Lavigne' to the
                 // font name you want and uncommenting the following line.
                 // 'Lavigne',
+                ...defaultTheme.fontFamily.serif,
+            ],
+            headings: [
+                // Use a custom serif font for this site by changing 'Lavigne' to the
+                // font name you want and uncommenting the following line.
+                // 'Lavigne',
+                '"badger"',
                 ...defaultTheme.fontFamily.serif,
             ],
         },

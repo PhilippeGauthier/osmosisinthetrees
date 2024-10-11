@@ -1,6 +1,6 @@
 
 
-<span x-data="{ open: false }" class="inline-block text-left">
+<span x-data="{ open: false }" class="inline-block">
     <!-- Trigger -->
     {{# <div class="group relative aspect-square transform overflow-hidden">
         <div 
@@ -35,7 +35,7 @@
         </div>
     </div> #}}
     
-    <button class="font-bold text-osmosis-neutral hover:text-osmosis-orange text-2xl text-left transition" @click="open = true">{{ title }}</button>
+    <button class="font-bold text-osmosis-neutral hover:text-osmosis-orange text-2xl text-left transition uppercase" @click="open = true">{{ title }}</button>
 
     <!-- Modal -->
     <div
@@ -70,10 +70,10 @@
                 
             </div>
             <img alt="{{ title }}"
-            src="{{ glide:portrait format="webp" fit="crop_focal" square="500" quality="80" }}"
+            src="{{ glide:portrait format="webp" fit="crop_focal" square="500" quality="80" alt="{{ alt }}" }}"
             class=" object-contain mr-auto h-64">
                 <!-- Title -->
-                <h2 class="text-3xl font-bold" :id="$id('{{ title | slugify }}')">{{ title }}</h2>
+                <h2 class="text-3xl font-bold title uppercase" :id="$id('{{ title | slugify }}')">{{ title }}</h2>
                 <!-- Content -->
 
                 <article class="prose prose-p:text-sm prose-a:text-primary hover:prose-a:text-osmosis-orange">{{ bio }}</article>
