@@ -37,7 +37,7 @@
 
                     {{# Honeypot spam protection. #}}
                     <div class="hidden">
-                        <label class="font-bold" for="{{ honeypot }}">{{ trans:strings.form_honeypot }} <sup class="text-red-700">*</sup></label>
+                        <label class="font-mono tracking-wide" for="{{ honeypot }}">{{ trans:strings.form_honeypot }} <sup class="text-red-700">*</sup></label>
                         <input class="form-input w-full" id="{{ honeypot }}" type="text" name="{{ honeypot }}" x-model="form.{{ honeypot }}" tabindex="-1" autocomplete="off"/>
                     </div>
 
@@ -67,7 +67,7 @@
                                         )}}
                                     ">
                                         {{ unless type == 'spacer' }}
-                                            <label class="font-bold" for="{{ handle }}">
+                                            <label class="font-mono tracking-wide" for="{{ handle }}">
                                                 {{ trans :key="field:display" }}
                                                 {{ if validate | contains('required') || validate | contains('accepted') }}
                                                     <sup class="text-red-700">*</sup>
