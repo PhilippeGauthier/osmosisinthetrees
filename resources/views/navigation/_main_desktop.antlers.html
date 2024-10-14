@@ -6,6 +6,13 @@
 <!-- /navigation/_main_desktop.antlers.html -->
 <nav class="hidden md:block" aria-label="{{ trans:strings.main_navigation }}">
     <ul class="flex items-center gap-x-8">
+        {{ social_media:social_media }}
+        <a class="flex items-center osmo text-primary bg-blend-multiply hover:bg-black/[2.5%]"
+           href="{{ prefix }}{{ handle }}"
+           rel="noopener{{ type == 'mastodon' ?= ' me' }}"
+           aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}"
+           target="_blank">{{ svg :src="type" attr:class="w-4 h-4 overflow-visible fill-current transition hover:fill-osmosis-orange" attr:alt="" attr:aria-hidden="true" }}</a>
+        {{ /social_media:social_media }}
         {{ nav:main max_depth="2" include_home="true" select="title|url" }}
             {{ unless no_results }}
                 <li
@@ -13,7 +20,7 @@
                 >
                     <a
                         class="
-                            flex items-center font-bold text-sm hover:text-primary"
+                            osmo flex items-center font-mono text-sm hover:text-primary"
                             href="#{{ title | slugify }}"
                         
                 
@@ -27,7 +34,10 @@
                 </li>
             {{ /unless }}
         {{ /nav:main }}
-        <a href="{{ configuration:tickets_link}}">Buy Tickets</a>
+        <a target="_blank"
+        rel=""
+        class="text-black bg-primary px-3 py-2 rounded-3xl transition hover:bg-osmosis-orange"
+        href="{{ configuration:tickets_link }}">Buy tickets</a>
     </ul>
 </nav>
 
