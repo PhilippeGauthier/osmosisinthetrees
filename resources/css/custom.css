@@ -39,7 +39,7 @@
         display: none;
       }
       .headroom--top .osmo {
-        display: flex;
+        @apply lg:flex;
       }
 }
 
