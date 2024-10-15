@@ -9,13 +9,7 @@
     {{ block:title ?= { partial:typography/h2 :content="block:title" class=" mb-8" } }}
     <div
          class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center" id="artists">
-        
-
-
-        {{ collection:artists }}
-        
-            {{ partial:components/artist_grid sort="title"}}
-        {{ /collection:artists }}
+    
 
     </div>
     {{ /partial:page_builder/block }}
