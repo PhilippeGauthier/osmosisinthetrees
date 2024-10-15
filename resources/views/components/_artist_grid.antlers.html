@@ -22,7 +22,7 @@
             {{ bio }}
         </div>
         <div class="flex justify-between mt-3">
-            <button class="text-sm font-bold hover:text-osmosis-orange transition" @click="open = true">Read More</button>
+            <button class="text-base font-bold hover:text-osmosis-orange transition" @click="open = true">Read More</button>
             <div>
                 {{ if social_media }}
                 <div class="flex gap-x-3">
@@ -76,7 +76,7 @@
                 <h2 class="text-3xl font-bold title uppercase" :id="$id('{{ title | slugify }}')">{{ title }}</h2>
                 <!-- Content -->
 
-                <article class="prose prose-p:text-sm font-artist text-neutral prose-a:text-primary hover:prose-a:text-osmosis-orange">{{ bio }}</article>
+                <article class="prose prose-p:font-artist font-artist text-neutral prose-a:text-primary hover:prose-a:text-osmosis-orange">{{ bio }}</article>
 
                 <!-- Buttons -->
                 <div class="flex justify-between items-center">
@@ -90,7 +90,7 @@
                         </div>
                     {{ /if }}
                     </div>
-                    <button type="button" x-on:click="open = false" class="rounded-3xl bg-primary text-dark-blue font-mono text-sm hover:bg-osmosis-orange px-3 py-2 transition">
+                    <button type="button" x-on:click="open = false" class="rounded-3xl bg-primary text-dark-blue font-mono hover:bg-osmosis-orange px-3 py-2 transition">
                         Close
                     </button>
                 </div>

@@ -8,7 +8,7 @@
             <div>
             </div>
             <div
-                 class="hidden absolute left-0 right-0  order-first -mx-4 lg:flex flex-auto basis-full overflow-x-auto whitespace-nowrap border-b border-primary/10 py-4 font-mono text-sm text-primary sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
+                 class="hidden absolute left-0 right-0  order-first -mx-4 lg:flex flex-auto basis-full overflow-x-auto whitespace-nowrap border-b border-primary/10 py-4 font-mono text-base text-primary sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
                 <div class="mx-auto flex items-center gap-4 px-4 font-mono">
                     <p><time
                               datetime="{{ configuration:start_date }}">{{ configuration:start_date format="M d" }}</time>-<time
@@ -24,7 +24,7 @@
                     <p>{{ configuration:osmosis_simple_location }}</p>
                 </div>
             </div>
-            <nav class="relative hidden lg:flex space-x-6 text-sm">
+            <nav class="relative hidden lg:flex space-x-6">
                 {{ social_media:social_media }}
                 <a class="flex items-center  font- text-primary bg-blend-multiply hover:bg-black/[2.5%]"
                    href="{{ prefix }}{{ handle }}"
