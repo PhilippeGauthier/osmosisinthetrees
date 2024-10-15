@@ -8,12 +8,12 @@
 {{ partial:page_builder/block }}
 
         <div class="mx-auto max-w-xl">
-            {{ block:title ?= { partial:typography/h2 :content="block:title" class="text-left" class=" text-left mb-10" } }}
+            {{ block:title ?= { partial:typography/h2 :content="block:title" class="text-left" class=" text-left mb-6" } }}
         {{ block:text ?= { partial:typography/p :content="block:text" } }}
 
         {{# Render form and use Alpine based Statamic conditional logic. #}}
         {{ if form:handle }}
-            {{ form:create :in="form:handle" js="alpine:form" attr:x-ref="form" }}
+            {{ form:create :in="form:handle" js="alpine:form" attr:x-ref="form" :id="form:handle"}}
                 {{# Use Laravel Precognition for live validation and submission. #}}
                 <div x-data="formHandler()" class="flex flex-col gap-8" x-cloak>
                     {{# Error notifications. #}}

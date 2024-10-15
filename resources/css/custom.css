@@ -7,6 +7,10 @@
         font-family: 'badger';
         src: url('@/fonts/badger.otf') format('opentype');
     }
+    @font-face {
+        font-family: 'tf';
+        src: url('@/fonts/tf.otf') format('opentype');
+    }
     button {
         @apply font-mono;
         @apply tracking-normal;

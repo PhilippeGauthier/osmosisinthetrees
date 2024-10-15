@@ -60,13 +60,21 @@ module.exports = {
                 // Use a custom sans serif font for this site by changing 'Gaultier' to the
                 // font name you want and uncommenting the following line.
                 // 'Gaultier',
-                "Lato",
+                "Inter",
+                ...defaultTheme.fontFamily.sans,
+            ],
+            artist: [
+                // Use a custom sans serif font for this site by changing 'Gaultier' to the
+                // font name you want and uncommenting the following line.
+                // 'Gaultier',
+                "Work Sans",
                 ...defaultTheme.fontFamily.sans,
             ],
             serif: [
                 // Use a custom serif font for this site by changing 'Lavigne' to the
                 // font name you want and uncommenting the following line.
                 // 'Lavigne',
+                "tf",
                 ...defaultTheme.fontFamily.serif,
             ],
             headings: [
