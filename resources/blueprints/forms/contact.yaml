@@ -13,6 +13,7 @@ tabs:
                 - required
                 - 'min:2'
               localizable: true
+              autocomplete: name
           -
             handle: email
             field:
@@ -22,6 +23,7 @@ tabs:
                 - required
                 - email
               localizable: true
+              autocomplete: email
           -
             handle: message_body
             field:
