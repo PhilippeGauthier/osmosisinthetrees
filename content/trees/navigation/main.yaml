@@ -1,62 +1,8 @@
 tree:
   -
-    id: d4451a43-a8db-4557-9dd8-b7da035017cc
+    id: 0596af6f-dc4e-44a6-9c5a-a4c5cc6fb2a9
     title: Info
-    children:
-      -
-        id: d0bd8cc1-4edc-41d5-ba5d-7bef202ce051
-        entry: d13dabdd-2145-4b66-ab0f-d1225363fb8d
-      -
-        id: eccec59d-4046-4df7-90a0-ddb4229c6c9d
-        entry: 03fb4a49-c831-4ba4-9d0f-f238529e4149
-      -
-        id: 8bfd81a9-e40a-4314-a01d-7601c9f7052d
-        entry: 29a78c73-28ba-4611-a1bd-dab7bdaa6292
-      -
-        id: 0edc1b25-eec0-4420-978c-870fc6067a19
-        entry: d88dceae-ab16-4d4d-abd7-42515b1e8dde
-      -
-        id: a2b6b3b7-831f-4827-a202-d7ec443565bb
-        entry: 3be14c65-3745-4f15-adc1-a2e6b35e4705
-      -
-        id: a823a90e-b7b1-4035-b483-1ad952fc9de7
-        entry: deebe7eb-70b3-4297-a787-4ae4ebf18ee6
-      -
-        id: 6b036534-6868-4815-b077-83e27455012a
-        entry: 5dd99afd-423a-4299-8104-8a9b54c3aae7
-      -
-        id: 966cdbc2-8076-436b-b334-3dc925a7088c
-        entry: 63cce7c2-3294-48db-a8c0-d328f9dcf276
-      -
-        id: a3a679b9-ee61-446d-b80d-6761503e9034
-        entry: 00f07357-708a-4eb4-b4d4-6d7caf779e20
-      -
-        id: 5e84bcae-414e-4413-b870-425e5f2f5475
-        entry: 0bd4e03b-8538-46b7-9a4e-a006380b619d
-      -
-        id: 0d13f534-78a8-4fe2-a541-4bd01d7d24c3
-        entry: ba850a95-6b48-4a44-b119-cb88cbd7e322
-      -
-        id: 8ce978e8-0e3e-4cb7-a64b-ab3f70d3e469
-        entry: 64050635-4830-4867-ae93-b268048034e9
-      -
-        id: 841a91e7-51b6-438c-95b8-174d95ceea90
-        entry: 3d8e214c-1adf-422d-bc8a-ae449f2e76f6
-      -
-        id: 147faacd-26ad-4d4d-8059-e8b12ca6264c
-        entry: 8635116a-0aa2-4df3-8839-99fbaad60772
-      -
-        id: f4f9fa0b-10e7-4f80-a096-68ab636a7acb
-        entry: a6ddaa77-38f6-466c-8b93-a186bbcd82f2
-      -
-        id: f9ff6bcb-a478-41b3-91f9-d3a4e177720f
-        entry: 799fd716-faeb-4bfb-ad97-ef17311f9280
-      -
-        id: 5c6a9243-bc1a-48c2-8404-078115355068
-        entry: 35a7dfd2-943a-47d8-acbc-1ec505ee3e6c
-      -
-        id: d157d9c9-0c12-4f67-9da2-6d8e06508d0f
-        entry: 97d5889f-63d3-48ee-9ebf-4a7cc724df59
+    url: '#info'
   -
     id: 168b9ba3-169e-4b44-a399-28ec741b0302
     title: Contact
