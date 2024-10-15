@@ -4,7 +4,7 @@
 #}}
 <div class="relative mih-screen bg-[url('../../public/visuals/oitt_hero_bg.jpg')]" >
     {{# <img src="/visuals/oitt_hero_bg.jpg" alt=""> #}}
-    <div class="absolute bg-dark-blue/70 h-full w-full"></div>
+    <div class="absolute bg-dark-blue/70 h-full w-full "></div>
         <div class="relative lg:pt-24">
             
             <div class="mx-auto relative">
@@ -15,7 +15,7 @@
             </div>
             </div>
             {{ partial:page_builder/block }}
-            {{ block:title ?= { partial:typography/h2 :content="block:title" class="md:col-start-3 md:col-span-8 text-left mb-8" } }}
+            {{ block:title ?= { partial:typography/h2 :content="block:title" class="md:col-start-3 md:col-span-8 text-left mb-8 z-40" } }}
             <article class="prose mb-12 lg:mb-24 max-w-xl mx-auto">{{ header_paragraph }}</article>
             <div
                  class="max-w-xl mx-auto gap-x-10 flex-wrap flex justify-center mb-12 text-justify" id="artists">
@@ -31,7 +31,7 @@
         </div>
         
     </div>
-    <main class="py-12 md:py-16 lg:py-24 stack-12 md:stack-16 lg:stack-24" id="content">
+    <main class="py-12 md:py-16 lg:py-24 stack-12 md:stack-16 lg:stack-24 z-40" id="content">
         
     
             {{# <h2 data-filter="goo-1" data-script="filter1" style="opacity: 0" class="opacity-0 text-7xl">Wave</h2> #}}
