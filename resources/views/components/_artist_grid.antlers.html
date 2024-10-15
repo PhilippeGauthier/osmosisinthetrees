@@ -61,9 +61,9 @@
             <div
                 x-on:click.stop
                 x-trap.noscroll.inert="open"
-                class="relative w-full max-w-xl overflow-y-auto rounded-xl p-12 shadow-lg bg-dark-blue flex flex-col justify-start space-y-6"
+                class="relative w-full max-w-xl overflow-y-auto rounded-xl p-8 lg:p-12 shadow-lg bg-dark-blue flex flex-col justify-start space-y-6"
             >
-            <div class="absolute top-3 right-3 p-1 hover:cursor-pointer" x-on:click="open = false">
+            <div class="absolute top-3 right-3 p-1 hover:cursor-pointer text-primary" x-on:click="open = false">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                   </svg>
@@ -76,7 +76,7 @@
                 <h2 class="text-3xl font-bold title uppercase" :id="$id('{{ title | slugify }}')">{{ title }}</h2>
                 <!-- Content -->
 
-                <article class="prose prose-p:text-sm prose-a:text-primary hover:prose-a:text-osmosis-orange">{{ bio }}</article>
+                <article class="prose prose-p:text-sm font-artist text-neutral prose-a:text-primary hover:prose-a:text-osmosis-orange">{{ bio }}</article>
 
                 <!-- Buttons -->
                 <div class="flex justify-between items-center">
