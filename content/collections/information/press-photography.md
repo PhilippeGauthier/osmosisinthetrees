@@ -3,7 +3,7 @@ id: 799fd716-faeb-4bfb-ad97-ef17311f9280
 blueprint: information
 title: 'Press & Photography'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1727966648
+updated_at: 1729019165
 content:
   -
     type: paragraph
@@ -17,7 +17,7 @@ content:
           -
             type: link
             attrs:
-              href: 'https://osmosisinthetrees.com/contact-form'
+              href: 'https://osmosisinthetrees.com/contact-form#contact'
               rel: history
               target: null
               title: null
