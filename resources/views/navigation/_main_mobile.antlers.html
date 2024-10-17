@@ -6,19 +6,25 @@
 <!-- /navigation/_main_mobile.antlers.html -->
 <nav
     x-data="{ mobileNavOpen: false }"
-    class="md:hidden font-mono"
+    class="md:hidden font-mono relative"
     aria-label="{{ trans:strings.main_navigation }}"
     x-trap.inert.noscroll.noautofocus="mobileNavOpen"
     @keyup.escape.stop.prevent="mobileNavOpen = false"
     x-cloak
 >
+<div class="left-0 fixed flex items-center justify-between w-full bottom-8 px-8">
     <button
-        @click.prevent.stop="mobileNavOpen = !mobileNavOpen"
-        class="fixed bottom-4 right-4"
-        :aria-label="mobileNavOpen ? '{{ trans:strings.nav_close }}' : '{{ trans:strings.nav_open }}'"
-        :aria-expanded="mobileNavOpen"
-       
-    >{{ partial:components/logo width="120" class=""}}</button>
+    @click.prevent.stop="mobileNavOpen = !mobileNavOpen"
+    class=""
+    :aria-label="mobileNavOpen ? '{{ trans:strings.nav_close }}' : '{{ trans:strings.nav_open }}'"
+    :aria-expanded="mobileNavOpen"
+   
+>{{ partial:components/logo width="120" class=""}}</button>
+<a target="_blank"
+rel=""
+class=" text-black bg-primary px-3 py-3 rounded-full transition font-mono hover:bg-osmosis-orange"
+href="{{ configuration:tickets_link }}">Tickets</a>
+</div>
 
     <div
         class="fixed inset-0 z-20 pt-8 px-8 pb-12 flex flex-col justify-end bg-dark-blue/95"
