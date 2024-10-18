@@ -5,7 +5,6 @@ password_hash: $2y$12$crREji0IFgm4JUtESyfhb.7bkL2Zp.9vG0MWqHKSb12dIGrx1T8uq
 preferences:
   assets:
     images:
-      mode: grid
       per_page: 100
   collections:
     artists:

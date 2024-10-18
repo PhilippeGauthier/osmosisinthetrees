@@ -3,7 +3,7 @@ id: 29a78c73-28ba-4611-a1bd-dab7bdaa6292
 blueprint: information
 title: Location
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1727966326
+updated_at: 1729275332
 content:
   -
     type: paragraph
@@ -26,6 +26,9 @@ content:
     content:
       -
         type: text
+        marks:
+          -
+            type: bold
         text: 'FROM NORTH or SOUTHBOUND I-5'
       -
         type: hardBreak
@@ -37,6 +40,9 @@ content:
     content:
       -
         type: text
+        marks:
+          -
+            type: bold
         text: 'FROM CALIFORNIA COAST'
       -
         type: hardBreak
@@ -48,5 +54,5 @@ content:
     content:
       -
         type: text
-        text: 'If you use Google Maps to travel to Out n’ About, please note that it will direct you to turn one road too early. Continue past this road about .25 miles and you will see the main Out n About entrance indicated by a sign. Alternatively use this pin to navigate to the entrance.'
+        text: 'If you use Google Maps to travel to Out n’ About, please note that it will direct you to turn one road too early. Continue past this road about .25 miles and you will see the main Out n About entrance indicated by a sign.'
 ---
