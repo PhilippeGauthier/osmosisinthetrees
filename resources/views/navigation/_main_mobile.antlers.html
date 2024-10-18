@@ -67,7 +67,7 @@ href="{{ configuration:tickets_link }}">Tickets</a>
                             @click="mobileNavOpen = false"
                             class="
                                 flex items-center font-mono text-xl hover:text-primary"
-                                href="#{{ title | slugify }}"
+                                 href="{{ if entry }}#{{ entry | url }}{{ else }}{{ url }}{{ /if }}"
                             
                     
                         >
