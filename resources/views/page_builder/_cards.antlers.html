@@ -30,7 +30,7 @@
                         {{ /button }}
                         {{ partial:typography/h3 class="sr-only" :content="title" }}
                     {{ else }}
-                        {{ partial:typography/h3 class="mb-2 text-primary" :content="title" }}
+                        {{# {{ partial:typography/h3 class="mb-2 text-primary" :content="title" }} #}}
                     {{ /if }}
                     {{ if image }}
                     <a target="_blank" rel="norefer" href="{{glide:image }}"><img src="{{ glide:image }}" alt=""></a>
