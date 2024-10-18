@@ -37,6 +37,13 @@ fields:
                   config:
                     display: Text
                 -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: files
+                    type: assets
+                    display: Image
+                -
                   handle: button
                   field: buttons.buttons
                   config:

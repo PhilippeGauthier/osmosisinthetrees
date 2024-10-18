@@ -2,10 +2,12 @@
     @name Default
     @desc The default template with an outer wrapper grid as defined in tailwind.config.js. It makes sure all blocks on a page get evenly spaced without having to worry about margins or paddings.
 #}}
-<div class="relative mih-screen bg-[url('../../public/visuals/oitt_hero_bg.jpg')]" >
+<div class="relative flex flex-col min-h-screen bg-[url('../../public/visuals/oitt_hero_bg.jpg')]" >
     {{# <img src="/visuals/oitt_hero_bg.jpg" alt=""> #}}
-    <div class="absolute bg-dark-blue/70 h-full w-full "></div>
-        <div class="relative pt-12 lg:pt-20">
+    
+    <div class="absolute bg-dark-blue/70 h-full w-full z-[1]"></div>
+    {{ if !segment_1 }}
+        <div class="relative pt-12 lg:pt-20 z-[2]">
             
             <div class="mx-auto relative">
                 
@@ -16,7 +18,7 @@
             </div>
             {{ partial:page_builder/block }}
             {{ block:title ?= { partial:typography/h2 :content="block:title" class="md:col-start-3 md:col-span-8 text-left mb-8 " } }}
-            <article class="prose-sm lg:prose mb-12 lg:mb-20 max-w-xl mx-auto">{{ header_paragraph }}</article>
+            <article class="prose-sm lg:prose mb-12 lg:mb-20 max-w-xl mx-auto prose-a:text-primary">{{ header_paragraph }}</article>
             <div
                  class="max-w-xl mx-auto gap-x-10 flex-wrap flex justify-center mb-12" id="artists">
                 
@@ -31,7 +33,8 @@
         </div>
         
     </div>
-    <main class="py-12 md:py-16 lg:py-20 stack-12 md:stack-16 lg:stack-20" id="content">
+    {{ /if }}
+    <main class="flex-grow py-12 md:py-16 lg:py-20 stack-12 md:stack-16 lg:stack-20 z-[2]" id="content">
         
     
             {{# <h2 data-filter="goo-1" data-script="filter1" style="opacity: 0" class="opacity-0 text-7xl">Wave</h2> #}}

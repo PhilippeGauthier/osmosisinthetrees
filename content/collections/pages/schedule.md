@@ -10,16 +10,19 @@ page_builder:
       -
         id: m2f4sh2v
         title: Thursday
-        text: 'test text'
-        button:
-          -
-            id: m2f4sm1p
-            label: 'test label'
-            link_type: asset
-            target_blank: false
-            asset: oitt24-program-thurs-phone-bg.png
-            button_type: button
-            attr_title: Download
+        type: card
+        enabled: true
+        image: oitt24-program-thurs-phone-bg.png
+      -
+        id: m2fan33n
+        title: Friday
+        image: oitt24-program-fri-phone-bg.png
+        type: card
+        enabled: true
+      -
+        id: m2favd9v
+        title: Saturday
+        image: oitt24-program-sat-phone-bg.png
         type: card
         enabled: true
     type: cards
@@ -30,5 +33,12 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1729280330
+updated_at: 1729290488
+header_paragraph:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: test
 ---

@@ -21,7 +21,7 @@
                     <a
                         class="
                             osmo flex items-center font-mono hover:text-osmosis-orange"
-                            href="#{{ title | slugify }}"
+                            href="{{ if entry }}#{{ entry | url }}{{ else }}{{ url }}{{ /if }}"
                         
                 
                     >
