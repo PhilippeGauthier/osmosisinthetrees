@@ -2,11 +2,13 @@ tree:
   -
     id: 0596af6f-dc4e-44a6-9c5a-a4c5cc6fb2a9
     title: Info
-    url: '#info'
+    data:
+      anchor: '#info'
   -
     id: dd03d006-25a0-4ea6-9554-d085f76fac95
     entry: 969801fe-3f21-4d76-a580-7a8a93d18402
   -
     id: 168b9ba3-169e-4b44-a399-28ec741b0302
     title: Contact
-    url: '#contact'
+    data:
+      anchor: '#contact'

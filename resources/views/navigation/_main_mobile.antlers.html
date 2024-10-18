@@ -56,7 +56,7 @@ href="{{ configuration:tickets_link }}">Tickets</a>
 
             
         </li>
-            {{ nav:main max_depth="1" include_home="true" select="title|url" }}
+            {{ nav:main max_depth="2" include_home="true" }}
                 {{ unless no_results }}
 
 
@@ -67,7 +67,7 @@ href="{{ configuration:tickets_link }}">Tickets</a>
                             @click="mobileNavOpen = false"
                             class="
                                 flex items-center font-mono text-xl hover:text-primary"
-                                 href="{{ if entry }}#{{ entry | url }}{{ else }}{{ url }}{{ /if }}"
+                                {{ if anchor }}href="{{ homepage}}{{ anchor}}"{{ else }}href="{{ url }}"{{ /if }}
                             
                     
                         >

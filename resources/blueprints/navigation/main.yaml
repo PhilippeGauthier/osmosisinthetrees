@@ -4,3 +4,9 @@ tabs:
     sections:
       -
         display: General
+        fields:
+          -
+            handle: anchor
+            field:
+              type: text
+              display: Anchor

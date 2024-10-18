@@ -13,7 +13,7 @@
            aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}"
            target="_blank">{{ svg :src="type" attr:class="w-4 h-4 overflow-visible fill-current transition hover:fill-osmosis-orange" attr:alt="" attr:aria-hidden="true" }}</a>
         {{ /social_media:social_media }}
-        {{ nav:main max_depth="2" include_home="true" select="title|url" }}
+        {{ nav:main max_depth="2" include_home="true"  }}
             {{ unless no_results }}
                 <li
                     class="relative leading-none"
@@ -21,16 +21,10 @@
                     <a
                         class="
                             osmo flex items-center font-mono hover:text-osmosis-orange"
-                            href="{{ if entry }}#{{ entry | url }}{{ else }}{{ url }}{{ /if }}"
-                        
-                
+                            {{ if anchor }}href="{{ homepage}}{{ anchor}}"{{ else }}href="{{ url}}"{{ /if }}
                     >
                         {{ title }}
-
                     </a>
-
-
-                    
                 </li>
             {{ /unless }}
         {{ /nav:main }}
