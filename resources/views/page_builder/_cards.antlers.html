@@ -7,18 +7,15 @@
 <!-- /page_builder/_cards.antlers.html -->
 {{ partial:page_builder/block }}
     <div class="span-content grid md:grid-cols-12 gap-fluid-grid-gap mt-16 lg:mt-32">
-        {{ block:title ?= { partial:typography/h2 :content="block:title" class="md:col-start-3 md:col-span-8 text-center mb-8" } }}
-
+        {{ block:title ?= { partial:typography/h2 :content="block:title" class="md:col-start-4 md:col-span-6    mb-4" } }}
+        <article class="prose md:col-start-4 md:col-span-6">
+            <p>Osmosis in the Trees 2024 is right around the corner! Download the schedules below to plan your weekend and use as your phone home screen.</p>
+        </article>
         {{ block:cards }}
             <article
                 class="
-                    flex flex-col justify-between items-start p-6 shadow-lg rounded
-                    {{ switch(
-                        (total_results === 1) => 'md:col-span-8 md:col-start-3',
-                        (total_results === 2) => 'md:col-span-6',
-                        (total_results > 2) => 'md:col-span-8 md:col-start-3 lg:col-span-4 lg:col-start-0',
-                        () => void
-                    )}}
+                    flex flex-col justify-between items-start py-6 shadow-lg rounded md:col-span-6 md:col-start-4
+
                 "
             >
                 <div class="mb-4">
