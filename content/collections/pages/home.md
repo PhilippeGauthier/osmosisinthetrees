@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1729292161
+updated_at: 1729296973
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -61,6 +61,9 @@ header_paragraph:
     content:
       -
         type: text
+        marks:
+          -
+            type: bold
         text: "View the weekend's schedule "
       -
         type: text
@@ -72,8 +75,13 @@ header_paragraph:
               rel: null
               target: null
               title: null
+          -
+            type: bold
         text: here
       -
         type: text
+        marks:
+          -
+            type: bold
         text: .
 ---
