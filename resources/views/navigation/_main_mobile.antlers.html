@@ -16,6 +16,7 @@
     <button
     @click.prevent.stop="mobileNavOpen = !mobileNavOpen"
     class=""
+    tabindex="1"
     :aria-label="mobileNavOpen ? '{{ trans:strings.nav_close }}' : '{{ trans:strings.nav_open }}'"
     :aria-expanded="mobileNavOpen"
    
