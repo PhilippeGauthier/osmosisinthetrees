@@ -3,7 +3,7 @@ id: a5bc6d02-833e-4bdd-9b41-ef8dfad891a0
 blueprint: artist
 title: 'DANNY DAZE'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1728677920
+updated_at: 1729455176
 bio:
   -
     type: paragraph
@@ -35,7 +35,7 @@ bio:
       -
         type: text
         text: 'Danny Daze’s radical approach to preserving music’s integrity while breaking its boundaries may seem volatile, but it’s not random. “I’ve always gone against the grain & it’s important for everything I do to feel authentic. There isn’t much difference between Daniel Gomez and Danny Daze.”'
-portrait: artists/danny-daze/oitt24-artist-portraits-danny-daze.jpg
+portrait: artists/danny-daze/oitt24-artist-portraits-danny-daze.jpeg
 social_media:
   -
     id: m2566m25
