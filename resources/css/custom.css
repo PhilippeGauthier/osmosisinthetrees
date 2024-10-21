@@ -23,7 +23,9 @@
     html.lenis, html.lenis body {
         height: auto;
       }
-      
+      body.modal-open .hide-when-modal {
+        display: none;
+      }
       .lenis.lenis-smooth {
         scroll-behavior: auto !important;
       }

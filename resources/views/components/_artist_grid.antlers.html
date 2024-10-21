@@ -1,15 +1,26 @@
-
-
-<span x-data="{ open: false }" class="inline-block">
-
+<span 
+  x-data="{ 
+    open: false,
+    toggleModal() {
+      this.open = !this.open;
+      document.body.classList.toggle('modal-open', this.open);
+    }
+  }" 
+  class="inline-block"
+>
     <!-- Trigger -->
-    <button class="font-bold text-osmosis-neutral hover:text-osmosis-orange text-lg lg:text-2xl text-left transition uppercase tracking-wide font-artist" @click="open = true">{{ title }}</button>
+    <button 
+      class="font-bold text-osmosis-neutral hover:text-osmosis-orange text-lg lg:text-2xl text-left transition uppercase tracking-wide font-artist" 
+      @click="toggleModal()"
+    >
+      {{ title }}
+    </button>
 
     <!-- Modal -->
     <div
         x-show="open"
         style="display: none"
-        x-on:keydown.escape.prevent.stop="open = false"
+        x-on:keydown.escape.prevent.stop="toggleModal()"
         role="dialog"
         aria-modal="true"
         x-id="['{{ title | slugify}}']"
@@ -22,49 +33,45 @@
         <!-- Panel -->
         <div
             x-show="open" x-transition
-            x-on:click="open = false"
+            x-on:click="toggleModal()"
             class="relative flex min-h-screen items-center justify-center p-4"
         >
-        
             <div
                 x-on:click.stop
                 x-trap.noscroll.inert="open"
                 class="relative w-full max-w-xl overflow-y-auto rounded-xl p-8 lg:p-12 shadow-lg bg-dark-blue flex flex-col justify-start space-y-6"
             >
-            <div class="absolute top-3 right-3 p-1 hover:cursor-pointer text-primary" x-on:click="open = false">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                  </svg>
-                
-            </div>
-            <img alt="{{ title }}"
-            src="{{ glide:portrait format="webp" fit="crop_focal" square="500" quality="80" alt="{{ alt }}" }}"
-            class=" object-contain mr-auto h-64">
+                <div class="absolute top-3 right-3 p-1 hover:cursor-pointer text-primary" x-on:click="toggleModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </div>
+                <img alt="{{ title }}"
+                    src="{{ glide:portrait format="webp" fit="crop_focal" square="500" quality="80" alt="{{ alt }}" }}"
+                    class="object-contain mr-auto h-64">
                 <!-- Title -->
                 <h2 class="text-3xl font-bold font-artist title uppercase" :id="$id('{{ title | slugify }}')">{{ title }}</h2>
                 <!-- Content -->
-
                 <article class="prose prose-p:font-artist font-artist text-neutral prose-a:text-primary hover:prose-a:text-osmosis-orange">{{ bio }}</article>
 
                 <!-- Buttons -->
                 <div class="flex justify-between items-center">
-
                     <div>
                         {{ if social_media }}
                         <div class="flex gap-x-3">
                             {{ social_media }}
-                                <a class="text-neutral" href="{{ prefix }}{{ handle }}" rel="noopener{{ type == 'mastodon' ?= ' me' }}" aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}" target="_blank">{{ svg :src="type" attr:class="w-4 h-4 overflow-visible fill-primary hover:fill-osmosis-orange transition" attr:alt="" attr:aria-hidden="true" }}</a>
+                            <a class="text-neutral" href="{{ prefix }}{{ handle }}" rel="noopener{{ type == 'mastodon' ?= ' me' }}" aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}" target="_blank">
+                                {{ svg :src="type" attr:class="w-4 h-4 overflow-visible fill-primary hover:fill-osmosis-orange transition" attr:alt="" attr:aria-hidden="true" }}
+                            </a>
                             {{ /social_media }}
                         </div>
-                    {{ /if }}
+                        {{ /if }}
                     </div>
-                    <button type="button" x-on:click="open = false" class="rounded-3xl bg-primary text-dark-blue font-mono hover:bg-osmosis-orange px-3 py-2 transition">
+                    <button type="button" x-on:click="toggleModal()" class="rounded-3xl bg-primary text-dark-blue font-mono hover:bg-osmosis-orange px-3 py-2 transition">
                         Close
                     </button>
                 </div>
-
             </div>
         </div>
     </div>
 </span>
-
