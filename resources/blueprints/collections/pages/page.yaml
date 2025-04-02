@@ -17,6 +17,17 @@ tabs:
               validate:
                 - required
           -
+            handle: first_wave_artists
+            field:
+              type: list
+              display: 'First Wave Artists'
+          -
+            handle: early_bird_paragraph
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: 'Early Bird Paragraph'
+          -
             handle: header_paragraph
             field:
               remove_empty_nodes: false

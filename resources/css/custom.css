@@ -11,6 +11,22 @@
         font-family: 'tf';
         src: url('@/fonts/tf.otf') format('opentype');
     }
+    @font-face {
+        font-family: 'TF48-Style1';
+        src: url('@/fonts/TF48-Style1.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'TF48-Style2';
+        src: url('@/fonts/TF48-Style2.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'TF48-Style3';
+        src: url('@/fonts/TF48-Style3.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'TF48-Style4';
+        src: url('@/fonts/TF48-Style4.otf') format('opentype');
+    }
     button {
         @apply font-mono;
         @apply tracking-normal;
@@ -19,7 +35,9 @@
     * {
         @apply tracking-wide;
     }
-
+    a {
+        @apply cursor-pointer hover:cursor-pointer;
+    }
     html.lenis, html.lenis body {
         height: auto;
       }
@@ -48,6 +66,22 @@
       .headroom--top .osmo {
         @apply lg:flex;
       }
+    
+    /* Reset pointer events and cursor for all interactive elements */
+    a, button, [role="button"] {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
+    
+    /* Ensure parent containers allow pointer events */
+    body, main, div {
+        pointer-events: auto;
+    }
+    
+    /* Only disable pointer events on specific decorative elements */
+    .deco, .deco__item {
+        pointer-events: none;
+    }
 }
 
 @layer components {

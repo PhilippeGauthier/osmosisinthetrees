@@ -69,7 +69,7 @@ a {
 	text-decoration: underline;
 	color: var(--color-link);
 	outline: none;
-	cursor: pointer;
+	cursor: auto;
 }
 
 a:hover {

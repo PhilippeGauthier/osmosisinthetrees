@@ -970,7 +970,7 @@
 
 ### What's improved
 - Simplify default prose configuration. 8d5c7106 by @robdekort
-- Default to `text-neutral` typography headings. ac4b2bc4 by @robdekort
+- Default to `text-white` typography headings. ac4b2bc4 by @robdekort
 - Improve default pull quote styling. 008b0c96 by @robdekort
 
 ## v6.32 (2022-11-21)
@@ -994,7 +994,7 @@
 - Add back required `{{ asset }}` tag in picture partial for when looping an asset field. 5fe2f0fd by @robdekort
 
 ### What's improved
-- Use `text-neutral` instead of `text-black` in OG image template. 6e22f901 by @robdekort
+- Use `text-white` instead of `text-black` in OG image template. 6e22f901 by @robdekort
 - Update dependencies. f4f839f3 by @robdekort
 
 ## v6.29 (2022-11-20)
