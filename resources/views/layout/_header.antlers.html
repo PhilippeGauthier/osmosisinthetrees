@@ -4,16 +4,38 @@
 #}}
 
 <!-- /layout/_header.antlers.html -->
-<header class="fixed w-full z-10 px-8 lg:py-4 text-primary">
+<header class="fixed w-full z-10 px-8 lg:py-4 text-white">
     <div class="span-content flex justify-between items-start">
         {{# Make partials you want to use for the header or use and edit premade examples like the following ones. #}}
         <div class="relative hidden lg:flex flex-col">
         {{ partial:components/logo width="120" class="hidden lg:flex z-40" }}
-        <img class="max-w-[95px] mx-auto mt-8 absolute top-16 left-2" src="/visuals/OITT24-poster-date.png" alt="">
+        <div class="mt-8 text-base font-serif flex flex-col">
+            {{ configuration:desktop_header_text | nl2br }}
+        </div>
+        <nav class="hidden lg:block mt-[40vh] lg:z-50" aria-label="{{ trans:strings.main_navigation }}">
+            <ul class="flex flex-col  gap-y-8">
+
+                {{ nav:main max_depth="2" include_home="true"  }}
+                    {{ unless no_results }}
+                        <li
+                            class="relative leading-none"
+                        >
+                            <a
+                                class="
+                                    osmo flex items-center font-mono hover:text-osmosis-orange"
+                                    {{ if anchor }}href="{{ homepage}}{{ anchor}}"{{ else }}href="{{ url}}"{{ /if }}
+                            >
+                                {{ title }}
+                            </a>
+                        </li>
+                    {{ /unless }}
+                {{ /nav:main }}
+            </ul>
+        </nav>
         </div>
         <div
         class="osmo text-center absolute left-0 right-0 mt-3 order-first -mx-4 lg:flex flex-auto basis-full overflow-x-auto whitespace-nowrap py-4 font-mono  text-primary sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:py-0 z-10">
-       <div class="mx-auto flex items-center content-center justify-center gap-4 px-4 font-mono">
+       {{# <div class="mx-auto flex items-center content-center justify-center gap-4 px-4 font-mono">
            <p><time
                      datetime="{{ configuration:start_date }}">{{ configuration:start_date format="M d" }}</time>-<time
                      datetime="{{ configuration:end_date }}">{{ configuration:end_date format="d" }}</time>
@@ -26,7 +48,7 @@
                      stroke-linejoin="round"></path>
            </svg>
            <p>{{ configuration:osmosis_simple_location }}</p>
-       </div>
+       </div> #}}
    </div>
         {{ partial:navigation/main }}
     </div>

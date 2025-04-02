@@ -15,7 +15,7 @@
         {{ if form:handle }}
             {{ form:create :in="form:handle" js="alpine:form" attr:x-ref="form" :id="form:handle"}}
                 {{# Use Laravel Precognition for live validation and submission. #}}
-                <div x-data="formHandler()" class="flex flex-col gap-8" x-cloak>
+                <div x-data="formHandler()" class="flex flex-col gap-8 bg-osmosis-brown p-8" x-cloak>
                     {{# Error notifications. #}}
                     <template x-if="form.hasErrors && submitted">
                         <div id="summary" role="group" class="rounded border p-4 bg-red-50 border-red-700">

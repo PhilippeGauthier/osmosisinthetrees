@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1729296973
+updated_at: 1743632304
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -48,40 +48,59 @@ header_paragraph:
     content:
       -
         type: text
-        text: 'Previously hosted exclusively at the hallowed Ming Lounge, a century-old Chinese restaurant in Portland, Osmosis has found a second home amidst the tranquil beauty of the trees. With a penchant for bringing hi-fi soundscapes to DIY spaces, the Osmosis team has been hard at work curating a weekend of audio/visual immersion.'
+        text: 'Osmosis in the trees returns for the 3rd year at our second home amidst the tranquil beauty of the trees.'
       -
         type: hardBreak
       -
         type: hardBreak
       -
         type: text
-        text: 'Join us Thursday, October 24th through Sunday, October 27th for three nights of music and magic.'
+        text: "With a penchant for bringing hi-fi soundscapes to DIY spaces, the Osmosis team has been hard at work curating a weekend of audio/visual immersion.\L\L"
   -
     type: paragraph
     content:
       -
         type: text
-        marks:
-          -
-            type: bold
-        text: "View the weekend's schedule "
+        text: 'Join us Thursday, September 25th through Sunday, September 28th for three nights of music and magic.'
+first_wave_artists:
+  - CCL
+  - LOIF
+  - rrao
+  - Plebian
+  - Ramzilla
+early_bird_pagragraph:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'More to be announced'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Earlybird tickets on sale now at ra.com →'
+early_bird_paragraph:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'More to be announced'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'Earlybird tickets on sale now at '
       -
         type: text
         marks:
           -
             type: link
             attrs:
-              href: 'statamic://entry::969801fe-3f21-4d76-a580-7a8a93d18402'
+              href: 'https://ra.co/events/2084436'
               rel: null
-              target: null
+              target: _blank
               title: null
-          -
-            type: bold
-        text: here
-      -
-        type: text
-        marks:
-          -
-            type: bold
-        text: .
+        text: 'ra.com →'
 ---

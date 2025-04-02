@@ -25,6 +25,26 @@ tabs:
             field:
               type: link
               display: 'Tickets Link'
+          -
+            handle: desktop_header_text
+            field:
+              type: textarea
+              display: 'Desktop Header Text'
+          -
+            handle: instagram
+            field:
+              type: link
+              display: Instagram
+          -
+            handle: discord
+            field:
+              type: link
+              display: Discord
+          -
+            handle: soundcloud
+            field:
+              type: link
+              display: Soundcloud
       -
         display: 'System pages'
         instructions: 'Configure system pages.'

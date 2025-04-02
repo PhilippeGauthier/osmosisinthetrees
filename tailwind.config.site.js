@@ -22,6 +22,8 @@ module.exports = {
                 "dark-blue": "#191930",
                 "osmosis-orange": "#FF5500",
                 "osmosis-neutral": "#ffc88c",
+                "osmosis-gray": "#636262",
+                "osmosis-brown": "#322D20",
                 // Neutrals: neutral colors, with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
                 neutral: {
                     DEFAULT: "#FFFAD8",
@@ -74,15 +76,39 @@ module.exports = {
                 // Use a custom serif font for this site by changing 'Lavigne' to the
                 // font name you want and uncommenting the following line.
                 // 'Lavigne',
-                "tf",
+                "Roboto Mono",
                 ...defaultTheme.fontFamily.serif,
             ],
             headings: [
                 // Use a custom serif font for this site by changing 'Lavigne' to the
                 // font name you want and uncommenting the following line.
                 // 'Lavigne',
-                '"badger"',
+                '"TF48-Style1"',
                 ...defaultTheme.fontFamily.serif,
+            ],
+            tf1: [
+                // Use a custom serif font for this site by changing 'Lavigne' to the
+                // font name you want and uncommenting the following line.
+                // 'Lavigne',
+                '"TF48-Style1"',
+            ],
+            tf2: [
+                // Use a custom serif font for this site by changing 'Lavigne' to the
+                // font name you want and uncommenting the following line.
+                // 'Lavigne',
+                '"TF48-Style2"',
+            ],
+            tf3: [
+                // Use a custom serif font for this site by changing 'Lavigne' to the
+                // font name you want and uncommenting the following line.
+                // 'Lavigne',
+                '"TF48-Style3"',
+            ],
+            tf4: [
+                // Use a custom serif font for this site by changing 'Lavigne' to the
+                // font name you want and uncommenting the following line.
+                // 'Lavigne',
+                '"TF48-Style4"',
             ],
         },
         // The font weights available for this site.

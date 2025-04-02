@@ -20,23 +20,63 @@
             {{ partial:statamic-peak-tools::snippets/live_preview }}
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,400&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         </head>
 
         <body
-              class="flex flex-col min-h-screen bg-dark-blue text-neutral selection:bg-primary/20 selection:text-highlight-yellow ">
+              class="flex flex-col min-h-screen bg-dark-blue text-white selection:bg-primary/20 selection:text-highlight-yellow bg-[url('../../public/visuals/OITT_25_BG_19x6.jpg')] ">
             {{ stack:seo_body }}
             {{ partial:statamic-peak-tools::snippets/noscript }}
             {{ partial:statamic-peak-tools::navigation/skip_to_content }}
             {{ partial:components/svg_filter }}
-            {{ partial:layout/header }}
+            {{# {{ partial:layout/header }} #}}
+            <div class="fixed h-[90vh] flex-col justify-between max-w-[20vw] top-8 left-8 hidden lg:flex z-50">
+                <div>
+                {{ partial:components/logo width="120" class="hidden lg:flex z-40" }}
+                <div class="mt-8 text-base font-serif flex flex-col">
+                    {{ configuration:desktop_header_text | nl2br }}
+                </div>
+                <ul class="flex flex-col gap-y-4 mt-12 text-primary">
+
+                    {{ nav:main max_depth="2" include_home="true"  }}
+                        {{ unless no_results }}
+                            <li
+                                class="relative leading-none"
+                            >
+                                <a
+                                    class="
+                                        osmo flex items-center font-mono hover:text-osmosis-orange"
+                                        {{ if anchor }}href="{{ homepage}}{{ anchor}}"{{ else }}href="{{ url}}"{{ /if }}
+                                >
+                                    {{ title }}
+                                </a>
+                            </li>
+                        {{ /unless }}
+                    {{ /nav:main }}
+                </ul>
+                </div>
+                <ul class="flex flex-col gap-y-2 mt-12 text-white font-serif underline underline-offset-2">
+                    <li>
+                        <a class="text-underline" href="{{ configuration:instagram }}" target="_blank" rel="noopener">IG</a>
+                    </li>
+                    <li>
+                        <a class="text-underline" href="{{ configuration:soundcloud }}" target="_blank" rel="noopener">Soundcloud</a>
+                    </li>
+                    <li>
+                        <a class="text-underline" href="{{ configuration:discord }}" target="_blank" rel="noopener">Discord</a>
+                    </li>
+                </ul>
+                
+            </div>
             {{ template_content }}
+            <div class="fixed lg:max-w-[20vw] bottom-6 right-6 lg:top-8 lg:right-8 z-40">
+                <a target="_blank"
+                rel=""
+                class="text-black bg-primary px-3 py-2 rounded-3xl transition font-mono hover:bg-osmosis-orange"
+                href="{{ configuration:tickets_link }}">Early bird tickets</a>
+            </div>
             {{ partial:layout/footer }}
             {{# <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
                     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
