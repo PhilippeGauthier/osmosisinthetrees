@@ -23,7 +23,7 @@ module.exports = {
                 "osmosis-orange": "#FF5500",
                 "osmosis-neutral": "#ffc88c",
                 "osmosis-gray": "#636262",
-                "osmosis-brown": "#322D20",
+                "osmosis-brown": "#322D1F",
                 // Neutrals: neutral colors, with a default fallback if you don't need shades. Always set a DEFAULT when you use shades.
                 neutral: {
                     DEFAULT: "#FFFAD8",
