@@ -1,10 +1,12 @@
 ---
-id: 03fb4a49-c831-4ba4-9d0f-f238529e4149
+id: 6a3c0677-b52c-4b9f-8029-bfd49746a905
+published: false
 blueprint: information
-title: 'Ticket info'
+title: 'Ticket info (2024)'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1743639685
+updated_at: 1743639459
 icon: ticket
+duplicated_from: 03fb4a49-c831-4ba4-9d0f-f238529e4149
 content:
   -
     type: paragraph
@@ -29,7 +31,7 @@ content:
             content:
               -
                 type: text
-                text: 'April 04 ~ Early Bird - $220'
+                text: 'August 22 ~ Early Bird - $185'
       -
         type: listItem
         content:
@@ -38,7 +40,7 @@ content:
             content:
               -
                 type: text
-                text: 'TBD ~ Second release - $240'
+                text: 'September 4 ~ Second release - $200'
       -
         type: listItem
         content:
@@ -47,7 +49,7 @@ content:
             content:
               -
                 type: text
-                text: 'TBD ~ Final release - $260'
+                text: 'September 25 ~ Final release - $215'
   -
     type: paragraph
     content:
@@ -66,7 +68,7 @@ content:
           -
             type: link
             attrs:
-              href: 'https://ra.co/events/2084436'
+              href: 'https://ra.co/events/1986191'
               rel: null
               target: _blank
               title: null

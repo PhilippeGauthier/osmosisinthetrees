@@ -3,7 +3,7 @@ data:
   social_media:
     -
       id: m1scodrj
-      handle: osmosis.world/
+      handle: osmosis__world/
       prefix: 'https://www.instagram.com/'
       type: instagram
       enabled: true

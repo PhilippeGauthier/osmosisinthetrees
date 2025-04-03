@@ -1,9 +1,9 @@
 ---
 id: d13dabdd-2145-4b66-ab0f-d1225363fb8d
 blueprint: information
-title: 'Osmosis in the trees 2024'
+title: 'Osmosis in the trees 2025'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1727972624
+updated_at: 1743639328
 icon: information-circle
 content:
   -
