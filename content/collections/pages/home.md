@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1743635736
+updated_at: 1743640369
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -86,7 +86,7 @@ early_bird_paragraph:
     content:
       -
         type: text
-        text: 'More to be announced'
+        text: 'More artists to be announced'
       -
         type: hardBreak
       -
