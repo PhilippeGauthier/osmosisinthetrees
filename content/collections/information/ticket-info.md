@@ -3,7 +3,7 @@ id: 03fb4a49-c831-4ba4-9d0f-f238529e4149
 blueprint: information
 title: 'Ticket info'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1743639685
+updated_at: 1743711759
 icon: ticket
 content:
   -
@@ -29,7 +29,7 @@ content:
             content:
               -
                 type: text
-                text: 'April 04 ~ Early Bird - $220'
+                text: '4/3 ~ Early Bird - $220'
       -
         type: listItem
         content:
@@ -53,7 +53,7 @@ content:
     content:
       -
         type: text
-        text: '-> Add an additional $50 to join us for Thursday’s programming - trust us, you don’t want to miss out on Thurday...'
+        text: '-> Add $50 to join us for Thursday’s programming - trust us, you don’t want to miss out on Thursday...'
   -
     type: paragraph
     content:
@@ -82,13 +82,13 @@ content:
     content:
       -
         type: text
-        text: 'An ID that matches your ticket will be required for entry. If you use a different name than your ID, please be able to show the purchase confirmation email.'
+        text: 'Entry requires an ID that matches your ticket. If you use a different name than your ID, please be able to show the purchase confirmation email.'
   -
     type: paragraph
     content:
       -
         type: text
-        text: "We have a limited number of discounted tickets available for those experiencing economic hardship. If the price of admission is prohibitive to your attendance and you'd like to come, please reach out. We’d love to have you."
+        text: "We have a limited number of discounted tickets for those experiencing economic hardship. If the price of admission is prohibitive to your attendance and you'd like to come, please reach out. We’d love to have you."
   -
     type: paragraph
     content:

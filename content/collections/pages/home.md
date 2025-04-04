@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1743640369
+updated_at: 1743713617
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -40,33 +40,13 @@ page_builder:
     form: contact
     type: form
     enabled: true
-seo_title: 'Osmosis in the Trees - 2025'
-seo_description: 'A curated music festival in Talkima Oregon. September 25 - 28'
-header_paragraph:
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: 'Osmosis in the trees returns for the 3rd year at our second home amidst the tranquil beauty of the trees.'
-      -
-        type: hardBreak
-      -
-        type: hardBreak
-      -
-        type: text
-        text: "With a penchant for bringing hi-fi soundscapes to DIY spaces, the Osmosis team has been hard at work curating a weekend of audio/visual immersion.\L\L"
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: 'Join us Thursday, September 25th through Sunday, September 28th for three nights of music and magic.'
+seo_title: 'Osmosis in the Trees 2025'
+seo_description: 'A curated music festival in Talkima, Oregon. September 25 - 28'
 first_wave_artists:
   - CCL
   - LOIF
   - rrao
-  - Plebian
+  - Plebeian
   - Ramzilla
 early_bird_pagragraph:
   -
@@ -86,12 +66,23 @@ early_bird_paragraph:
     content:
       -
         type: text
-        text: 'More artists to be announced'
+        text: 'behold in treetops'
       -
         type: hardBreak
       -
         type: text
-        text: 'Earlybird tickets on sale now at '
+        text: 'a portal appears, calling'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: 'ravers to come home'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'Get early bird tickets on '
       -
         type: text
         marks:
