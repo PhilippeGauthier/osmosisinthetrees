@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1743713617
+updated_at: 1752512999
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -42,12 +42,6 @@ page_builder:
     enabled: true
 seo_title: 'Osmosis in the Trees 2025'
 seo_description: 'A curated music festival in Talkima, Oregon. September 25 - 28'
-first_wave_artists:
-  - CCL
-  - LOIF
-  - rrao
-  - Plebeian
-  - Ramzilla
 early_bird_pagragraph:
   -
     type: paragraph
@@ -82,7 +76,7 @@ early_bird_paragraph:
     content:
       -
         type: text
-        text: 'Get early bird tickets on '
+        text: 'Get tickets on '
       -
         type: text
         marks:

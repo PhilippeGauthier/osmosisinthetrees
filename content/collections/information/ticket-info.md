@@ -3,7 +3,7 @@ id: 03fb4a49-c831-4ba4-9d0f-f238529e4149
 blueprint: information
 title: 'Ticket info'
 updated_by: 17503e27-3aa1-4ed4-812b-2b3ab850ba93
-updated_at: 1743711759
+updated_at: 1752512973
 icon: ticket
 content:
   -
@@ -17,7 +17,7 @@ content:
     content:
       -
         type: text
-        text: 'Ticket prices from Fri - Sun:'
+        text: '2 dat pass ticket prices (Fri - Sun):'
   -
     type: bulletList
     content:
@@ -38,7 +38,7 @@ content:
             content:
               -
                 type: text
-                text: 'TBD ~ Second release - $240'
+                text: '7/13 ~ First release - $260 + fees ($274.30)'
       -
         type: listItem
         content:
@@ -47,7 +47,7 @@ content:
             content:
               -
                 type: text
-                text: 'TBD ~ Final release - $260'
+                text: 'TBD ~ Final release - $280 + fees ($297.15)'
   -
     type: paragraph
     content:
