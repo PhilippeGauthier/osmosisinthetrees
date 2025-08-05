@@ -12,6 +12,8 @@
         "php": "^8.2",
         "laravel/framework": "^11",
         "laravel/tinker": "^2.9",
+        "resend/resend-laravel": "^0.19.0",
+        "resend/resend-php": "^0.18.1",
         "spatie/browsershot": "^4.3",
         "spatie/image": "^3.7",
         "statamic/cms": "^5.0",

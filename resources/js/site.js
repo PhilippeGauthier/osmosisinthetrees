@@ -18,10 +18,13 @@ Alpine.start();
 import Headroom from "headroom.js";
 // grab an element
 var myElement = document.querySelector("header");
-// construct an instance of Headroom, passing the element
-var headroom = new Headroom(myElement);
-// initialise
-headroom.init();
+// only initialize Headroom if the header element exists
+if (myElement) {
+    // construct an instance of Headroom, passing the element
+    var headroom = new Headroom(myElement);
+    // initialise
+    headroom.init();
+}
 
 // // Call Lenis
 // // Initializes smooth scrolling with Lenis and integrates it with GSAP's ScrollTrigger.
