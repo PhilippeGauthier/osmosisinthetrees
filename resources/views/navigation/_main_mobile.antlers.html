@@ -40,18 +40,31 @@
 
             </div>
             <ul class="flex flex-col py-2 gap-y-4 overflow-auto mb-8">
+
                 <li class="relative leading-none">
+                    <a @click="mobileNavOpen = false"
+                       class="
+                    flex items-center font-mono text-xl hover:text-primary"
+                       href="{{ configuration:soundcloud }}">
+                       Soundcloud
+                    </a>
+                </li>
+                <li class="relative leading-none">
+                    <a @click="mobileNavOpen = false"
+                       class="
+                    flex items-center font-mono text-xl hover:text-primary"
+                       href="{{ configuration:discord }}">
+                       Discord
+                    </a>
+                </li>
+                {{# <li class="relative leading-none">
                     <a @click="mobileNavOpen = false"
                        class="
                     flex items-center font-mono text-xl hover:text-primary"
                        href="{{ if segment_1 }}{{ config:app:url }}{{ /if }}#artists">
                         Artists
-
                     </a>
-
-
-
-                </li>
+                </li> #}}
                 {{ nav:main max_depth="2" include_home="true" }}
                 {{ unless no_results }}
 
