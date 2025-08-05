@@ -31,7 +31,7 @@
             {{ partial:statamic-peak-tools::snippets/noscript }}
             {{ partial:statamic-peak-tools::navigation/skip_to_content }}
             {{ partial:components/svg_filter }}
-            {{# {{ partial:layout/header }} #}}
+            {{ partial:layout/header }}
             <div class="fixed h-[90vh] flex-col justify-between max-w-[20vw] top-8 left-8 hidden lg:flex z-50">
                 <div>
                 {{ partial:components/logo width="120" class="hidden lg:flex z-40" }}
@@ -71,7 +71,7 @@
                 
             </div>
             {{ template_content }}
-            <div class="fixed lg:max-w-[20vw] bottom-6 right-1/2 translate-x-1/2 lg:top-8 lg:right-8 lg:translate-x-0 text-center z-40 w-full lg:w-auto">
+            <div class="hidden lg:block lg:fixed lg:max-w-[20vw] bottom-6 right-1/2 translate-x-1/2 lg:top-8 lg:right-8 lg:translate-x-0 text-center z-40 w-full lg:w-auto">
                 <a target="_blank"
                 rel=""
                 class="text-black bg-primary px-6 py-5 lg:px-4 lg:py-3 rounded-5xl transition font-mono hover:bg-osmosis-orange inline-block"

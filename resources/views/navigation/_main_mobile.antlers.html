@@ -3,105 +3,93 @@
     @desc The sites main mobile navigation rendered on each page. It's 2 levels deep by default and uses AlpineJS for interactivity.
 #}}
 
-<!-- /navigation/_main_mobile.antlers.html -->
-<nav
-    x-data="{ mobileNavOpen: false }"
-    class="md:hidden font-mono relative"
-    aria-label="{{ trans:strings.main_navigation }}"
-    x-trap.inert.noscroll.noautofocus="mobileNavOpen"
-    @keyup.escape.stop.prevent="mobileNavOpen = false"
-    x-cloak
->
-<div class="left-0 fixed flex items-center justify-between w-full bottom-8 px-8 hide-when-modal">
-    <button
-    @click.prevent.stop="mobileNavOpen = !mobileNavOpen"
-    class=""
-    tabindex="1"
-    :aria-label="mobileNavOpen ? '{{ trans:strings.nav_close }}' : '{{ trans:strings.nav_open }}'"
-    :aria-expanded="mobileNavOpen"
-   
->{{ partial:components/logo width="120" class=""}}</button>
-<a target="_blank"
-rel=""
-class=" text-black bg-primary px-3 py-3 rounded-full transition font-mono hover:bg-osmosis-orange hide-when-modal"
-href="{{ configuration:tickets_link }}">Tickets</a>
-</div>
+    <!-- /navigation/_main_mobile.antlers.html -->
+    <nav x-data="{ mobileNavOpen: false }"
+         class="md:hidden font-mono relative"
+         aria-label="{{ trans:strings.main_navigation }}"
+         x-trap.inert.noscroll.noautofocus="mobileNavOpen"
+         @keyup.escape.stop.prevent="mobileNavOpen = false"
+         x-cloak>
+        <div class="left-0 fixed flex items-center justify-between w-full bottom-8 px-8 hide-when-modal">
+            <button @click.prevent.stop="mobileNavOpen = !mobileNavOpen"
+                    class=""
+                    tabindex="1"
+                    :aria-label="mobileNavOpen ? '{{ trans:strings.nav_close }}' : '{{ trans:strings.nav_open }}'"
+                    :aria-expanded="mobileNavOpen">{{ partial:components/logo width="120" class=""}}</button>
+            <a target="_blank"
+               rel=""
+               class=" text-black bg-primary px-3 py-3 rounded-full transition font-mono hover:bg-osmosis-orange hide-when-modal"
+               href="{{ configuration:tickets_link }}">Tickets</a>
+        </div>
 
-    <div
-        class="fixed inset-0 z-20 pt-8 px-8 pb-12 flex flex-col justify-end bg-osmosis-brown/95"
-        x-show="mobileNavOpen"
-        x-transition.origin.bottom.right
-    >
-    <div class="absolute bottom-5 right-8 items-center p-1 hover:cursor-pointer" x-on:click="mobileNavOpen = false">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-10 h-10" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-          </svg>
-        
-    </div>
-        <ul class="flex flex-col py-2 gap-y-4 overflow-auto mb-8">
-            <li
-            class="relative leading-none"
-        >
-            <a
-                @click="mobileNavOpen = false"  
-                class="
+        <div class="fixed inset-0 z-20 pt-8 px-8 pb-12 flex flex-col justify-end bg-osmosis-brown/95"
+             x-show="mobileNavOpen"
+             x-transition.origin.bottom.right>
+            <div class="absolute bottom-5 right-8 items-center p-1 hover:cursor-pointer"
+                 x-on:click="mobileNavOpen = false">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     class="w-10 h-10"
+                     stroke-width="1.5"
+                     stroke="currentColor">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6 18 18 6M6 6l12 12" />
+                </svg>
+
+            </div>
+            <ul class="flex flex-col py-2 gap-y-4 overflow-auto mb-8">
+                <li class="relative leading-none">
+                    <a @click="mobileNavOpen = false"
+                       class="
                     flex items-center font-mono text-xl hover:text-primary"
-                    href="{{ if segment_1 }}{{ config:app:url }}{{ /if }}#artists"
-                
-            >
-                Artists
+                       href="{{ if segment_1 }}{{ config:app:url }}{{ /if }}#artists">
+                        Artists
 
-            </a>
+                    </a>
 
 
-            
-        </li>
-            {{ nav:main max_depth="2" include_home="true" }}
+
+                </li>
+                {{ nav:main max_depth="2" include_home="true" }}
                 {{ unless no_results }}
 
 
-                    <li
-                        class="relative leading-none"
-                    >
-                        <a
-                            @click="mobileNavOpen = false"
-                            class="
+                <li class="relative leading-none">
+                    <a @click="mobileNavOpen = false"
+                       class="
                                 flex items-center font-mono text-xl hover:text-primary"
-                                {{ if anchor }}href="{{ homepage}}{{ anchor}}"{{ else }}href="{{ url }}"{{ /if }}
-                            
-                    
-                        >
-                            {{ title }}
-    
-                        </a>
-    
-    
-                        
-                    </li>
+                       {{ if anchor }}href="{{ homepage}}{{ anchor}}"
+                       {{ else }}href="{{ url }}"
+                       {{ /if }}>
+                        {{ title }}
+
+                    </a>
+
+
+
+                </li>
                 {{ /unless }}
-            {{ /nav:main }}
-            <li
-            class="relative leading-none"
-        >
-            {{ social_media:social_media }}
-            <a class="flex items-center font-mono text-xl hover:text-primary"
-               href="{{ prefix }}{{ handle }}"
-               rel="noopener{{ type == 'mastodon' ?= ' me' }}"
-               aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}"
-               target="_blank">{{ type | title }}</a>
-            {{ /social_media:social_media }}
-            </li>
-            <li
-            class="relative leading-none"
-        >
-            <a target="_blank"
-            rel=""
-            class="text-black inline-block bg-primary px-4 py-3 rounded-3xl transition hover:bg-osmosis-orange"
-            href="{{ configuration:tickets_link }}">Buy tickets</a>
-            </li>
+                {{ /nav:main }}
+                <li class="relative leading-none">
+                    {{ social_media:social_media }}
+                    <a class="flex items-center font-mono text-xl hover:text-primary"
+                       href="{{ prefix }}{{ handle }}"
+                       rel="noopener{{ type == 'mastodon' ?= ' me' }}"
+                       aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}"
+                       target="_blank">{{ type | title }}</a>
+                    {{ /social_media:social_media }}
+                </li>
+                <li class="relative leading-none">
+                    <a target="_blank"
+                       rel=""
+                       class="text-black inline-block bg-primary px-4 py-3 rounded-3xl transition hover:bg-osmosis-orange"
+                       href="{{ configuration:tickets_link }}">Buy tickets</a>
+                </li>
 
-        </ul>
+            </ul>
 
-    </div>
-</nav>
-<!-- End: /navigation/_main_mobile.antlers.html -->
+        </div>
+    </nav>
+    <!-- End: /navigation/_main_mobile.antlers.html -->
