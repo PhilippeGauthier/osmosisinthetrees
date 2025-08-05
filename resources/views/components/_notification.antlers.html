@@ -11,7 +11,7 @@
     class="
         rounded border p-4
         {{ switch(
-            (type == 'success') => 'bg-green-50 border-green-700',
+            (type == 'success') => 'bg-primary/10 border-primary',
             (type == 'notice') => 'bg-yellow-50 border-yellow-700',
             (type == 'error') => 'bg-red-50 border-red-700',
             () => 'bg-gray-50 border-gray-700'
@@ -28,7 +28,7 @@
                 attr:class="
                     h-5 w-5 fill-current motion-safe:transition-colors
                     { switch(
-                        (type == 'success') => 'text-green-700',
+                        (type == 'success') => 'text-primary',
                         (type == 'notice') => 'text-yellow-700',
                         (type == 'error') => 'text-red-700',
                         () => 'text-gray-700'
@@ -39,9 +39,9 @@
         <div class="ml-3">
             <h3
                 class="
-                    text-base leading-5 font-bold
+                    text-base leading-5 font-normal
                     {{ switch(
-                        (type == 'success') => 'text-green-800',
+                        (type == 'success') => 'text-primary',
                         (type == 'notice') => 'text-yellow-800',
                         (type == 'error') => 'text-red-800',
                         () => 'text-gray-800'
