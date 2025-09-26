@@ -35,16 +35,38 @@
                         if (!grid) return;
 
                         const now = new Date();
-                        const currentDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 7, 0, 0);
+                        console.log('Current time:', now.toString());
 
                         const scheduleLinks = Array.from(grid.querySelectorAll('a[data-date]'));
 
-                        scheduleLinks.sort((a, b) => {
-                            const dateA = new Date(a.dataset.date + 'T07:00:00');
-                            const dateB = new Date(b.dataset.date + 'T07:00:00');
+                        // Calculate when each day moves to the back
+                        scheduleLinks.forEach(link => {
+                            const eventDate = new Date(link.dataset.date + 'T00:00:00');
+                            const cutoffTime = new Date(eventDate.getTime() + (31 * 60 * 60 * 1000));
+                            const timeUntilMove = cutoffTime - now;
+                            const hoursUntilMove = Math.floor(timeUntilMove / (1000 * 60 * 60));
+                            const minutesUntilMove = Math.floor((timeUntilMove % (1000 * 60 * 60)) / (1000 * 60));
 
-                            const isPastA = dateA < currentDate;
-                            const isPastB = dateB < currentDate;
+                            if (timeUntilMove > 0) {
+                                console.log(`${link.dataset.day.toUpperCase()} will move to back at: ${cutoffTime.toString()}`);
+                                console.log(`  Time until move: ${hoursUntilMove}h ${minutesUntilMove}m`);
+                            } else {
+                                console.log(`${link.dataset.day.toUpperCase()} already moved to back (cutoff was ${cutoffTime.toString()})`);
+                            }
+                        });
+
+                        console.log('---');
+
+                        scheduleLinks.sort((a, b) => {
+                            const dateA = new Date(a.dataset.date + 'T00:00:00');
+                            const dateB = new Date(b.dataset.date + 'T00:00:00');
+
+                            // Add 31 hours to get to 7am the next day (24 hours + 7 hours)
+                            const cutoffA = new Date(dateA.getTime() + (31 * 60 * 60 * 1000));
+                            const cutoffB = new Date(dateB.getTime() + (31 * 60 * 60 * 1000));
+
+                            const isPastA = now >= cutoffA;
+                            const isPastB = now >= cutoffB;
 
                             if (isPastA && !isPastB) return 1;
                             if (!isPastA && isPastB) return -1;
@@ -52,13 +74,23 @@
                             return dateA - dateB;
                         });
 
-                        scheduleLinks.forEach(link => {
+                        // Clear and re-append to force DOM update
+                        grid.innerHTML = '';
+                        console.log('New order after sorting:');
+                        scheduleLinks.forEach((link, index) => {
+                            console.log(`  ${index + 1}. ${link.dataset.day.toUpperCase()}`);
                             grid.appendChild(link);
                         });
                     }
 
-                    reorderScheduleImages();
+                    // Run immediately
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', reorderScheduleImages);
+                    } else {
+                        reorderScheduleImages();
+                    }
 
+                    // Check every minute
                     setInterval(reorderScheduleImages, 60000);
                 })();
             </script>
