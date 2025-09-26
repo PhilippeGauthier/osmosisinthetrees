@@ -15,53 +15,46 @@
                     {{ early_bird_paragraph }}
                 </article>
                 <div class="py-12 sm:pb-12 sm:pt-12 md:py-12 px-8 sm:px-6 lg:px-8 lg:max-w-[80vw] mx-auto">
-                    <div id="schedule-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-                        <a href="/visuals/OITT-2025_schedule_color_version_THURSDAY_9x16.PNG" target="_blank" class="block" data-day="thursday" data-date="2025-09-25">
+                    <!-- Desktop version - static, no reordering -->
+                    <div class="hidden md:grid grid-cols-3 gap-4 mb-12">
+                        <a href="/visuals/OITT-2025_schedule_color_version_THURSDAY_9x16.PNG" target="_blank" class="block">
                             <img src="/visuals/OITT-2025_schedule_color_version_THURSDAY_9x16.PNG" class="w-full h-auto" alt="Thursday Schedule">
                         </a>
-                        <a href="/visuals/OITT-2025_schedule_color_version_FRIDAY_9x16.PNG" target="_blank" class="block" data-day="friday" data-date="2025-09-26">
+                        <a href="/visuals/OITT-2025_schedule_color_version_FRIDAY_9x16.PNG" target="_blank" class="block">
                             <img src="/visuals/OITT-2025_schedule_color_version_FRIDAY_9x16.PNG" class="w-full h-auto" alt="Friday Schedule">
                         </a>
-                        <a href="/visuals/OITT-2025_schedule_color_version_SATURDAY_9x16.PNG" target="_blank" class="block" data-day="saturday" data-date="2025-09-27">
+                        <a href="/visuals/OITT-2025_schedule_color_version_SATURDAY_9x16.PNG" target="_blank" class="block">
                             <img src="/visuals/OITT-2025_schedule_color_version_SATURDAY_9x16.PNG" class="w-full h-auto" alt="Saturday Schedule">
                         </a>
                     </div>
+
+                    <!-- Mobile version - dynamic reordering, images loaded by JS -->
+                    <div id="mobile-schedule-grid" class="md:hidden grid grid-cols-1 gap-4 mb-12 min-h-[600px]">
+                        <!-- Content will be inserted by JavaScript -->
+                    </div>
+
                     <img src="visuals/OITT25_FULL LINEUP_small2x@2x.png" class="lg:w-2/3 mx-auto" alt="">
             </div>
             <script>
                 (function() {
-                    function reorderScheduleImages() {
-                        const grid = document.getElementById('schedule-grid');
+                    function loadMobileSchedules() {
+                        const grid = document.getElementById('mobile-schedule-grid');
                         if (!grid) return;
 
+                        const schedules = [
+                            { day: 'thursday', date: '2025-09-25', img: '/visuals/OITT-2025_schedule_color_version_THURSDAY_9x16.PNG', alt: 'Thursday Schedule' },
+                            { day: 'friday', date: '2025-09-26', img: '/visuals/OITT-2025_schedule_color_version_FRIDAY_9x16.PNG', alt: 'Friday Schedule' },
+                            { day: 'saturday', date: '2025-09-27', img: '/visuals/OITT-2025_schedule_color_version_SATURDAY_9x16.PNG', alt: 'Saturday Schedule' }
+                        ];
+
                         const now = new Date();
-                        console.log('Current time:', now.toString());
 
-                        const scheduleLinks = Array.from(grid.querySelectorAll('a[data-date]'));
+                        // Sort schedules based on current time
+                        schedules.sort((a, b) => {
+                            const dateA = new Date(a.date + 'T00:00:00');
+                            const dateB = new Date(b.date + 'T00:00:00');
 
-                        // Calculate when each day moves to the back
-                        scheduleLinks.forEach(link => {
-                            const eventDate = new Date(link.dataset.date + 'T00:00:00');
-                            const cutoffTime = new Date(eventDate.getTime() + (31 * 60 * 60 * 1000));
-                            const timeUntilMove = cutoffTime - now;
-                            const hoursUntilMove = Math.floor(timeUntilMove / (1000 * 60 * 60));
-                            const minutesUntilMove = Math.floor((timeUntilMove % (1000 * 60 * 60)) / (1000 * 60));
-
-                            if (timeUntilMove > 0) {
-                                console.log(`${link.dataset.day.toUpperCase()} will move to back at: ${cutoffTime.toString()}`);
-                                console.log(`  Time until move: ${hoursUntilMove}h ${minutesUntilMove}m`);
-                            } else {
-                                console.log(`${link.dataset.day.toUpperCase()} already moved to back (cutoff was ${cutoffTime.toString()})`);
-                            }
-                        });
-
-                        console.log('---');
-
-                        scheduleLinks.sort((a, b) => {
-                            const dateA = new Date(a.dataset.date + 'T00:00:00');
-                            const dateB = new Date(b.dataset.date + 'T00:00:00');
-
-                            // Add 31 hours to get to 7am the next day (24 hours + 7 hours)
+                            // Add 31 hours to get to 7am the next day
                             const cutoffA = new Date(dateA.getTime() + (31 * 60 * 60 * 1000));
                             const cutoffB = new Date(dateB.getTime() + (31 * 60 * 60 * 1000));
 
@@ -71,27 +64,35 @@
                             if (isPastA && !isPastB) return 1;
                             if (!isPastA && isPastB) return -1;
 
-                            return dateA - dateB;
+                            return dateA.getTime() - dateB.getTime();
                         });
 
-                        // Clear and re-append to force DOM update
+                        // Build and insert HTML
                         grid.innerHTML = '';
-                        console.log('New order after sorting:');
-                        scheduleLinks.forEach((link, index) => {
-                            console.log(`  ${index + 1}. ${link.dataset.day.toUpperCase()}`);
+                        schedules.forEach(schedule => {
+                            const link = document.createElement('a');
+                            link.href = schedule.img;
+                            link.target = '_blank';
+                            link.className = 'block';
+
+                            const img = document.createElement('img');
+                            img.src = schedule.img;
+                            img.className = 'w-full h-auto';
+                            img.alt = schedule.alt;
+
+                            link.appendChild(img);
                             grid.appendChild(link);
                         });
+
+                        // Remove min-height once loaded
+                        grid.style.minHeight = 'auto';
                     }
 
                     // Run immediately
-                    if (document.readyState === 'loading') {
-                        document.addEventListener('DOMContentLoaded', reorderScheduleImages);
-                    } else {
-                        reorderScheduleImages();
-                    }
+                    loadMobileSchedules();
 
-                    // Check every minute
-                    setInterval(reorderScheduleImages, 60000);
+                    // Check every minute for updates
+                    setInterval(loadMobileSchedules, 60000);
                 })();
             </script>
             </div>
