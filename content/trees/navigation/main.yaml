@@ -1,11 +1,10 @@
 tree:
-  -
-    id: 0596af6f-dc4e-44a6-9c5a-a4c5cc6fb2a9
-    title: Info
-    data:
-      anchor: '#info'
-  -
-    id: 168b9ba3-169e-4b44-a399-28ec741b0302
+  # -
+  #   id: 0596af6f-dc4e-44a6-9c5a-a4c5cc6fb2a9
+  #   title: Info
+  #   data:
+  #     anchor: '#info'
+  - id: 168b9ba3-169e-4b44-a399-28ec741b0302
     title: Contact
     data:
-      anchor: '#contact'
+      anchor: "#contact"
