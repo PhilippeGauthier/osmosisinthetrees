@@ -38,7 +38,7 @@ page_builder:
       form: contact
       type: form
       enabled: true
-seo_title: "Osmosis in the Trees 2025"
+seo_title: "Osmosis in the Trees 2026"
 seo_description: "A curated music festival in Talkima, Oregon. September 25 - 28"
 early_bird_pagragraph:
     - type: paragraph

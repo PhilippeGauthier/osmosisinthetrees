@@ -2,8 +2,8 @@ title: Configuration
 data:
   copyright_name: "Osmosis in the Trees"
   osmosis_simple_location: "Takilma, OR"
-  start_date: "2025-09-24"
-  end_date: "2025-09-27"
+  start_date: "2026-09-24"
+  end_date: "2026-09-27"
   tickets_link: "https://ra.co/events/2423344"
   desktop_header_text: |-
     Osmosis in the trees 2026
@@ -13,6 +13,6 @@ data:
   discord: "https://discord.gg/2FRasckK"
   soundcloud: "https://soundcloud.com/osmosis_world"
   error_404_entry: 059d4d8d-fc60-49f8-8823-7da10549e84e
-  copyright_since: 2025
+  copyright_since: 2023
   privacy_statement_type: none
   cookie_notice_type: none
