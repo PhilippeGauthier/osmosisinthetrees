@@ -2,11 +2,10 @@
     @name Default
     @desc The default template with an outer wrapper grid as defined in tailwind.config.js. It makes sure all blocks on a page get evenly spaced without having to worry about margins or paddings.
 #}}
-<div class="relative flex flex-col md:min-h-screen {{ if segment_1 }}z-[2]{{ /if }}" >
+{{ if !segment_1 }}
+<div class="relative flex flex-col md:min-h-screen" >
     {{# <img src="/visuals/oitt_hero_bg.jpg" alt=""> #}}
-    
 
-    {{ if !segment_1 }}
         <div class="relative z-[2]">
             
             <div class="mx-auto relative">
@@ -33,7 +32,9 @@
                         <!-- Content will be inserted by JavaScript -->
                 </div> #}}
 
-                <img src="visuals/osmosis-year-4-teaser-01.webp" class="lg:w-2/3 mx-auto px-6" alt="">
+                <div class="px-6">
+                    <img src="visuals/osmosis-year-4-teaser-01.webp" class="block w-full max-w-4xl mx-auto" alt="">
+                </div>
             </div>
             <script>
                 (function() {
@@ -122,7 +123,6 @@
                 {{ partial src="page_builder/{type}" }} 
             {{ /page_builder }}
         </main>
-    </div>
     {{ /if }}
 
     

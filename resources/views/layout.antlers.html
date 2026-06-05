@@ -32,7 +32,8 @@
             {{ partial:statamic-peak-tools::navigation/skip_to_content }}
             {{ partial:components/svg_filter }}
             {{ partial:layout/header }}
-            <div class="fixed h-[90vh] flex-col justify-between max-w-[20vw] top-8 left-8 hidden lg:flex z-50">
+            <div class="lg:grid lg:grid-cols-[max-content_minmax(0,1fr)_max-content] lg:items-start lg:gap-x-8">
+            <div class="hidden lg:flex sticky top-8 h-[90vh] flex-col justify-between pl-8 z-50">
                 <div>
                 {{ partial:components/logo width="120" class="hidden lg:flex z-40" }}
                 <div class="mt-8 text-base font-serif flex flex-col">
@@ -70,12 +71,15 @@
                 </ul>
                 
             </div>
+            <div class="min-w-0">
             {{ template_content }}
-            <div class="hidden lg:block lg:fixed lg:max-w-[20vw] bottom-6 right-1/2 translate-x-1/2 lg:top-8 lg:right-8 lg:translate-x-0 text-center z-40 w-full lg:w-auto">
+            </div>
+            <div class="hidden lg:block sticky top-8 justify-self-end pr-8 text-center z-40">
                 <a target="_blank"
                 rel=""
-                class="text-black bg-primary px-6 py-5 lg:px-4 lg:py-3 rounded-5xl transition font-mono hover:bg-osmosis-orange inline-block"
+                class="text-black bg-primary px-4 py-3 rounded-5xl transition font-mono hover:bg-osmosis-orange inline-block"
                 href="{{ configuration:tickets_link }}">Buy tickets</a>
+            </div>
             </div>
             {{ partial:layout/footer }}
             {{# <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
