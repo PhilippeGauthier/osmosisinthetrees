@@ -9,6 +9,7 @@ tabs:
             field:
               display: Name
               type: text
+              listable: true
               validate:
                 - required
                 - 'min:2'
@@ -19,6 +20,7 @@ tabs:
             field:
               display: 'Email address'
               type: text
+              listable: true
               validate:
                 - required
                 - email
@@ -29,6 +31,7 @@ tabs:
             field:
               display: Message
               type: textarea
+              listable: true
               validate:
                 - required
                 - 'min:5'
