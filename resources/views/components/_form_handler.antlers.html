@@ -1,0 +1,67 @@
+{{#
+    @name Form handler
+    @desc Project copy of the Peak Alpine form handler, hardened against
+          duplicate submissions. Guards `submit()` so it can only fire once,
+          keeps the button disabled after a successful send, and leaves the
+          success message visible (no auto-hide) so people don't resubmit.
+#}}
+
+<!-- components/_form_handler.antlers.html -->
+{{ once }}
+    {{# The Statamic helpers for conditional fields. #}}
+    <script src="/vendor/statamic/frontend/js/helpers.js"></script>
+
+    <script>
+        document.addEventListener('alpine:initializing', () => {
+            Alpine.data('formHandler', () => ({
+                success: false,
+                submitted: false,
+                sending: false,
+                form: null,
+                init() {
+                    this.form = this.$form(
+                        'post',
+                        this.$refs.form.getAttribute('action'),
+                        JSON.parse(this.$refs.form.getAttribute('x-data')).form,
+                        {
+                            headers: {
+                                'X-CSRF-Token': {
+                                    toString: () => this.$refs.form.querySelector('[name="_token"]').value,
+                                }
+                            }
+                        }
+                    )
+                },
+                submit() {
+                    {{# Block double-fires and any resubmission after success. #}}
+                    if (this.sending || this.success) return
+
+                    this.sending = true
+                    this.submitted = true
+
+                    this.form.submit()
+                        .then(response => {
+                            this.form.reset()
+                            this.$refs.form.reset()
+                            this.success = true
+                            this.submitted = false
+                            {{# Keep `sending` true so the form stays locked after a successful send. #}}
+                        })
+                        .then(this.$refs.form.scrollIntoView())
+                        .catch(error => {
+                            {{# Allow another attempt only when the submission failed. #}}
+                            this.sending = false
+                            const summary = document.querySelector('#summary')
+                            if (summary) {
+                                this.$focus.focus(summary.querySelector('a'))
+                            }
+                            else {
+                                console.log(error)
+                            }
+                        })
+                }
+            }))
+        })
+    </script>
+{{ /once }}
+<!-- End: components/_form_handler.antlers.html -->

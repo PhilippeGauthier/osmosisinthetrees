@@ -104,7 +104,7 @@
                         <div class="md:col-span-12 flex justify-end">
                             {{ partial:components/button as="button" button_type="button" label="{ trans:strings.form_send }" }}
                                 {{ slot:attributes }}
-                                    @click.prevent="submit" :disabled="form.processing" :class="{ 'opacity-25 cursor-default': form.processing }"
+                                    @click.prevent="submit" :disabled="form.processing || sending || success" :class="{ 'opacity-25 cursor-default': form.processing || sending || success }"
                                 {{ /slot:attributes }}
                             {{ /partial:components/button }}
                         </div>
@@ -112,8 +112,8 @@
                 </div>
             {{ /form:create }}
 
-            {{# Call in the Peak Tools Alpine Based Precognition Form Handler. #}}
-            {{ partial:statamic-peak-tools::snippets/form_handler }}
+            {{# Call in the hardened Alpine Precognition form handler (guards against duplicate submissions). #}}
+            {{ partial:components/form_handler }}
         {{ /if }}
     </div>
 {{ /partial:page_builder/block }}
